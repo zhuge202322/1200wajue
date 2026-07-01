@@ -26,7 +26,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="w-full bg-background relative mt-[-80px] pt-24 md:pt-0">
         {/* Full width swiper slider */}
-        <div className="w-full aspect-[4/3] sm:aspect-video md:h-screen relative">
+        <div className="w-full aspect-[4/3] sm:aspect-video md:h-[75vh] lg:h-[80vh] relative">
           <Swiper
             modules={[Autoplay, EffectFade, Navigation, Pagination]}
             effect="fade"
