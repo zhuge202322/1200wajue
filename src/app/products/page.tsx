@@ -13,9 +13,6 @@ export default function ProductsPage() {
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
           style={{ backgroundImage: `url('${product.image}')` }}
         ></div>
-        <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 uppercase">
-          {product.weight}
-        </div>
       </Link>
       <div className="p-8">
         <Link href={`/products/${product.id}`}>
@@ -38,10 +35,10 @@ export default function ProductsPage() {
       <section className="pt-32 pb-16 bg-surface-variant border-b border-outline">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
           <h1 className="text-4xl md:text-5xl font-bold text-on-background uppercase tracking-tight mb-4">
-            Our <span className="text-primary">Equipment</span>
+            HERESTRONG MINI EXCAVATORS
           </h1>
           <p className="text-xl text-on-surface-variant font-light max-w-3xl">
-            Engineered for maximum power, efficiency, and reliability. Explore our full fleet of excavators.
+            Compact and robust mini-excavator designed for maximum performance in construction, road building, gardening and landscaping, demolition and earthmoving.
           </p>
         </div>
       </section>
@@ -56,13 +53,13 @@ export default function ProductsPage() {
             <ul className="space-y-4">
               <li>
                 <a href="#nt-series" className="flex items-center justify-between text-on-surface-variant hover:text-primary transition-colors font-semibold">
-                  <span>NT Series (Standard)</span>
+                  <span>NT Series Excavators</span>
                   <span className="material-symbols-outlined text-sm">chevron_right</span>
                 </a>
               </li>
               <li>
                 <a href="#hs-series" className="flex items-center justify-between text-on-surface-variant hover:text-primary transition-colors font-semibold">
-                  <span>HS Series (Tailless)</span>
+                  <span>HS Series Excavators (Tailless)</span>
                   <span className="material-symbols-outlined text-sm">chevron_right</span>
                 </a>
               </li>
@@ -87,8 +84,7 @@ export default function ProductsPage() {
           <div id="nt-series" className="scroll-mt-32">
             <div className="mb-10 border-b border-outline pb-4 flex justify-between items-end">
               <div>
-                <h2 className="text-3xl font-bold text-on-background">NT Series</h2>
-                <p className="text-on-surface-variant mt-2">Standard Tail Crawler Excavators (1 to 2.5 Tons)</p>
+                <h2 className="text-3xl font-bold text-on-background">NT Series Excavators</h2>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

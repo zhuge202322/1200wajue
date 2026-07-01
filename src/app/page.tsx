@@ -69,20 +69,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8 md:px-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-outline">
             <div className="text-center px-4">
-              <div className="text-4xl font-bold text-primary mb-2">20+</div>
-              <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">Years Experience</div>
+              <div className="text-4xl font-bold text-primary mb-2">10</div>
+              <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">PRODUCTION LINE</div>
             </div>
             <div className="text-center px-4">
-              <div className="text-4xl font-bold text-primary mb-2">150+</div>
-              <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">Countries Exported</div>
+              <div className="text-4xl font-bold text-primary mb-2">300</div>
+              <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">EMPLOYEES</div>
             </div>
             <div className="text-center px-4">
-              <div className="text-4xl font-bold text-primary mb-2">10k+</div>
-              <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">Units Delivered</div>
+              <div className="text-4xl font-bold text-primary mb-2">CE</div>
+              <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">CERTIFICATED</div>
             </div>
             <div className="text-center px-4">
-              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">Global Support</div>
+              <div className="text-4xl font-bold text-primary mb-2">24H/7DAYS</div>
+              <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">ONLINE SERVICE</div>
             </div>
           </div>
         </div>
