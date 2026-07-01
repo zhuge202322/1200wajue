@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TITAN EXCAVATORS | Heavy-Duty Modernism</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&amp;family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#ffba20",
+                    "on-secondary-fixed-variant": "#464748",
+                    "tertiary-fixed": "#e2e2e2",
+                    "tertiary-container": "#c4c5c5",
+                    "secondary-container": "#464748",
+                    "surface-container-high": "#2a2a2a",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "surface-container-highest": "#353534",
+                    "on-error": "#690005",
+                    "surface-dim": "#131313",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#505252",
+                    "on-surface-variant": "#d5c4ab",
+                    "primary": "#ffdca1",
+                    "surface-container": "#201f1f",
+                    "surface-variant": "#353534",
+                    "surface-bright": "#3a3939",
+                    "deep-charcoal": "#1B1C1D",
+                    "on-error-container": "#ffdad6",
+                    "on-primary": "#412d00",
+                    "outline-variant": "#514532",
+                    "primary-fixed-dim": "#ffba20",
+                    "on-secondary-fixed": "#1b1c1d",
+                    "inverse-primary": "#7c5800",
+                    "secondary-fixed": "#e3e2e3",
+                    "surface-container-low": "#1c1b1b",
+                    "secondary-fixed-dim": "#c7c6c7",
+                    "on-secondary-container": "#b5b5b6",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "secondary": "#c7c6c7",
+                    "on-secondary": "#303031",
+                    "industrial-yellow": "#FFB800",
+                    "background": "#131313",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "inverse-on-surface": "#313030",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "tertiary": "#e1e1e1",
+                    "on-surface": "#e5e2e1",
+                    "on-primary-fixed": "#271900",
+                    "blueprint-gray": "#333537",
+                    "hazard-red": "#E60012",
+                    "on-background": "#e5e2e1",
+                    "surface": "#131313",
+                    "outline": "#9e8f78",
+                    "on-primary-container": "#6b4c00",
+                    "primary-fixed": "#ffdea8",
+                    "error": "#ffb4ab",
+                    "on-tertiary": "#2f3131",
+                    "primary-container": "#ffb800"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "component-gap": "1rem",
+                    "grid-margin-mobile": "1.5rem",
+                    "section-padding": "8rem",
+                    "gutter": "1.5rem",
+                    "grid-margin": "4rem"
+            },
+            "fontFamily": {
+                    "display-lg": ["IBM Plex Sans"],
+                    "stats-number": ["IBM Plex Sans"],
+                    "headline-xl": ["IBM Plex Sans"],
+                    "headline-xl-mobile": ["IBM Plex Sans"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg-mobile": ["IBM Plex Sans"],
+                    "headline-md": ["IBM Plex Sans"],
+                    "label-technical": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "stats-number": ["32px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-technical": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mechanical-hover:hover {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        .mask-gradient {
+            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+        }
+        .border-technical {
+            border: 1px solid #333537;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFB800;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-industrial-yellow selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-xl border-b border-blueprint-gray flex justify-between items-center px-grid-margin-mobile md:px-grid-margin w-full h-20">
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-industrial-yellow tracking-tighter">
+            TITAN EXCAVATORS
+        </div>
+<div class="hidden lg:flex gap-8">
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-industrial-yellow border-b-2 border-industrial-yellow pb-1" href="#">Models</a>
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface hover:text-industrial-yellow transition-colors duration-300" href="#">Fleet Management</a>
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface hover:text-industrial-yellow transition-colors duration-300" href="#">Dealer Portal</a>
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface hover:text-industrial-yellow transition-colors duration-300" href="#">Service</a>
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface hover:text-industrial-yellow transition-colors duration-300" href="#">Parts</a>
+</div>
+<button class="bg-industrial-yellow text-on-primary-fixed px-6 py-3 font-label-technical uppercase tracking-widest hover:bg-white transition-all active:scale-95 duration-100 ease-linear">
+            Request Quote
+        </button>
+</nav>
+<!-- Hero Slider -->
+<section class="relative h-screen w-full overflow-hidden bg-surface-container-lowest">
+<div class="hero-slider h-full w-full">
+<!-- Slide 1 -->
+<div class="hero-slide absolute inset-0 opacity-100 flex items-center justify-start px-grid-margin-mobile md:px-grid-margin">
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="A massive yellow industrial excavator operating at a dramatic construction site during a high-contrast dusk. The lighting is cinematic with deep shadows and vibrant orange highlights, emphasizing the machine's mechanical precision and heavy-duty steel structure. The atmosphere is professional, gritty, and technically advanced." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAW5ck-YiKlAEoZcmElNbAcHehWpqkpf465o7xXs1yYLA5yAOM0Tbs7Z6wWQYBKFkNUVp1kBZs_79pVoapxK0ij8HSse3bfYOJYuC9lTG-cdHw-4wEFJAbJrZwJrAQYTljDgZwxEnJH1RAoDBsmDIkNH0ZuGmF12POV9ZIb7WZREkmKoi1fDzaEg9d7iLYhIbgAEvjN9ZC3vnb5R42tnjIGi15zjuz-vOmIMTrRnRszHlR_Md6epOyWv7NezIlBaTgurnZ3e3fdxj8')"></div>
+<div class="absolute inset-0 z-10 bg-black/40"></div>
+<div class="relative z-20 max-w-4xl">
+<p class="font-label-technical text-industrial-yellow mb-4 reveal-text uppercase tracking-[0.3em]">Precision Engineering / Series KME</p>
+<h1 class="font-display-lg text-display-lg text-white mb-8 reveal-text uppercase">Unyielding Power.<br/>Technical Superiority.</h1>
+<div class="flex gap-4 reveal-text">
+<button class="bg-industrial-yellow text-on-primary-fixed px-8 py-4 font-label-technical uppercase font-bold hover:bg-white transition-all">View Models</button>
+<button class="border-2 border-white text-white px-8 py-4 font-label-technical uppercase font-bold hover:bg-white hover:text-black transition-all">Specifications</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Hud Overlay -->
+<div class="absolute bottom-10 right-10 z-30 hidden md:block">
+<div class="border-l-2 border-industrial-yellow pl-4 font-label-technical text-on-surface-variant">
+<div class="text-xs">MODEL_ID: KME-1024X</div>
+<div class="text-xs">HYDRAULIC_PSI: 5200</div>
+<div class="text-xs">GPS_ACTIVE: TRUE</div>
+</div>
+</div>
+</section>
+<!-- Statistics Section -->
+<section class="py-24 border-b border-blueprint-gray bg-surface-container-low px-grid-margin-mobile md:px-grid-margin">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="stat-item border-l-2 border-blueprint-gray pl-6">
+<div class="font-stats-number text-stats-number text-industrial-yellow mb-2 counter" data-target="2000">0+</div>
+<div class="font-label-technical text-label-technical uppercase text-on-surface-variant tracking-widest">Global Units Deployed</div>
+</div>
+<div class="stat-item border-l-2 border-blueprint-gray pl-6">
+<div class="font-stats-number text-stats-number text-industrial-yellow mb-2 counter" data-target="100">0+</div>
+<div class="font-label-technical text-label-technical uppercase text-on-surface-variant tracking-widest">Engineering Experts</div>
+</div>
+<div class="stat-item border-l-2 border-blueprint-gray pl-6">
+<div class="font-stats-number text-stats-number text-industrial-yellow mb-2 counter" data-target="50000">0</div>
+<div class="font-label-technical text-label-technical uppercase text-on-surface-variant tracking-widest">SQM Manufacturing Hub</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-section-padding px-grid-margin-mobile md:px-grid-margin bg-background">
+<div class="flex justify-between items-end mb-16 border-b border-blueprint-gray pb-8">
+<div>
+<p class="font-label-technical text-industrial-yellow uppercase mb-2">Fleet Selection</p>
+<h2 class="font-headline-xl text-headline-xl uppercase">The Titan Lineup</h2>
+</div>
+<a class="font-label-technical text-on-surface-variant hover:text-industrial-yellow flex items-center gap-2 transition-all" href="#">
+                ALL MODELS <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="product-card border-2 border-deep-charcoal hover:border-industrial-yellow transition-all duration-300 group">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" data-alt="A high-angle studio photograph of the KME10 heavy excavator against a dark, minimalist industrial background. The machine is painted in signature industrial yellow with matte black accents. Lighting is hard and technical, highlighting the hydraulic pistons and heavy tread system. Professional B2B catalog style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuXY3NAwDUdDOOqTs04IYTPJDkPM_5CcICx6joK3o3zDDEpLd8xxoyWVoEojCV8sTqmunU-F3p0vEKrmp2qPrX7koOppqjv1707BsuqhtNIQd093l8_RWVIpx36-3-JjvmIh9iTb_hpu0sDcN1eE07hYFpsMsvpBbcJ0V7WQomCxHrUcqo0Z9vXP7C3x1mJ-YLTewgQgg1iNEIrpIDKHPeci7sA5ELEIAgsyujSf8rz9yH8VA-pPo9y73IBI_2GujH-rYTA7CjDDI"/>
+<div class="absolute top-4 left-4 bg-industrial-yellow text-on-primary-fixed px-3 py-1 font-label-technical text-xs font-bold">KME SERIES</div>
+</div>
+<div class="p-8 bg-surface-container">
+<h3 class="font-headline-md text-headline-md mb-6 uppercase">KME10 Utility</h3>
+<div class="grid grid-cols-2 gap-4 border-t border-blueprint-gray pt-6">
+<div>
+<p class="font-label-technical text-[10px] text-on-surface-variant uppercase">Operating Weight</p>
+<p class="font-stats-number text-lg">10,500 KG</p>
+</div>
+<div>
+<p class="font-label-technical text-[10px] text-on-surface-variant uppercase">Engine Power</p>
+<p class="font-stats-number text-lg">55.4 KW</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-card border-2 border-deep-charcoal hover:border-industrial-yellow transition-all duration-300 group">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" data-alt="The KMZ18 heavy-duty mid-range excavator shown in a high-contrast industrial warehouse environment. The lighting emphasizes the sharp angles of the cab and the reinforced steel arm. The machine is rendered with realistic textures, reflecting a professional engineering aesthetic with industrial yellow and deep charcoal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAel6K9QC1S-LAt6yJ4MpFuUSCA4Dqt1lEegwlst2etaG5xLeYC1cSX7UzaIHm1-ovAcHir5F5EL8zl0OgfnV_TkbuZWf8m_V7eNnOe2eqWV9iLrt4Jrb9NkvEJ4ITgzia-0clNv0An4iea7RI_9ipfxHzrKaNi6XWol1MQexw45v1PnZ86fNZz9MLfStbmF_Xx7CEX015d-0ihaxKnGcQKBW1kYvR2YPMt-aqqGbcxSPTTc-TU3Iy735KB2f2Cn-uIgeRlrHbuEE"/>
+<div class="absolute top-4 left-4 bg-industrial-yellow text-on-primary-fixed px-3 py-1 font-label-technical text-xs font-bold">KMZ SERIES</div>
+</div>
+<div class="p-8 bg-surface-container">
+<h3 class="font-headline-md text-headline-md mb-6 uppercase">KMZ18 Advanced</h3>
+<div class="grid grid-cols-2 gap-4 border-t border-blueprint-gray pt-6">
+<div>
+<p class="font-label-technical text-[10px] text-on-surface-variant uppercase">Operating Weight</p>
+<p class="font-stats-number text-lg">18,200 KG</p>
+</div>
+<div>
+<p class="font-label-technical text-[10px] text-on-surface-variant uppercase">Engine Power</p>
+<p class="font-stats-number text-lg">92.0 KW</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="product-card border-2 border-deep-charcoal hover:border-industrial-yellow transition-all duration-300 group">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" data-alt="A massive KMZ40 heavy-duty excavator depicted in a high-contrast architectural render. The machine dominates the frame, showcasing its immense scale and technical complexity. The lighting is cold and precise, using deep shadows and sharp highlights on the industrial yellow paint. Dark mode aesthetic with high technical detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV4aeXMlkjcnUbu_qi1bw-ULXAms0j_PIVZud_zSpebuekFiEikMhaA5dFZi61u6vFwWlTe0y3zHyqn_DVTJ9ScpOATbFZhKVJsFCKJ9couKyYDOOOoMyuVkSFBEf14AnKJMxDDjYuRtNQmFC_6hcwbl6Es6pULlKIafaYpURTyWQdoyFpuiQhheWvx6SniH9OoKJZFefaTAsOv5y8UqXmQgtv0Q0zgBm-jGq6qsd2vLQrpjDWcApoQtYCfFZvlZjFpdhoWeXYUps"/>
+<div class="absolute top-4 left-4 bg-industrial-yellow text-on-primary-fixed px-3 py-1 font-label-technical text-xs font-bold">KMZ SERIES</div>
+</div>
+<div class="p-8 bg-surface-container">
+<h3 class="font-headline-md text-headline-md mb-6 uppercase">KMZ40 Titan</h3>
+<div class="grid grid-cols-2 gap-4 border-t border-blueprint-gray pt-6">
+<div>
+<p class="font-label-technical text-[10px] text-on-surface-variant uppercase">Operating Weight</p>
+<p class="font-stats-number text-lg">39,800 KG</p>
+</div>
+<div>
+<p class="font-label-technical text-[10px] text-on-surface-variant uppercase">Engine Power</p>
+<p class="font-stats-number text-lg">210 KW</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section / 3D Animation -->
+<section class="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-surface-container-lowest border-y border-blueprint-gray">
+<div class="relative order-2 lg:order-1 border-r border-blueprint-gray h-[500px] lg:h-auto">
+<!-- STITCH_THREEJS_START:ANIMATION_3 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_3" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_3');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(window.devicePixelRatio);
+container.appendChild(renderer.domElement);
+
+// Create a simplified mechanical/industrial 3D gear or abstract excavator part
+const group = new THREE.Group();
+
+const cylinderGeo = new THREE.CylinderGeometry(2, 2, 0.5, 32);
+const material = new THREE.MeshPhongMaterial({ color: 0xFFB800, shininess: 100 });
+const gearBody = new THREE.Mesh(cylinderGeo, material);
+group.add(gearBody);
+
+// Teeth for the gear
+const toothGeo = new THREE.BoxGeometry(0.5, 0.5, 0.8);
+for (let i = 0; i < 12; i++) {
+  const tooth = new THREE.Mesh(toothGeo, material);
+  const angle = (i / 12) * Math.PI * 2;
+  tooth.position.set(Math.cos(angle) * 2, 0, Math.sin(angle) * 2);
+  tooth.rotation.y = -angle;
+  group.add(tooth);
+}
+
+scene.add(group);
+
+const light = new THREE.DirectionalLight(0xffffff, 1);
+light.position.set(5, 5, 5);
+scene.add(light);
+scene.add(new THREE.AmbientLight(0x404040));
+
+camera.position.z = 8;
+
+function animate() {
+  requestAnimationFrame(animate);
+  group.rotation.y += 0.01;
+  group.rotation.x += 0.005;
+  renderer.render(scene, camera);
+}
+
+window.addEventListener('resize', () => {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+animate();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_3 -->
+<div class="absolute bottom-10 left-10 p-6 bg-background/80 backdrop-blur-md border border-blueprint-gray max-w-xs">
+<p class="font-label-technical text-industrial-yellow mb-2">SCHEMATIC_V2.4</p>
+<p class="font-body-md text-sm text-on-surface-variant">Real-time simulation of hydraulic load distribution and structural integrity under maximum stress conditions.</p>
+</div>
+</div>
+<div class="p-grid-margin-mobile md:p-grid-margin flex flex-col justify-center order-1 lg:order-2">
+<p class="font-label-technical text-industrial-yellow uppercase mb-6 tracking-[0.2em]">Our Heritage</p>
+<h2 class="font-headline-xl text-headline-xl mb-8 uppercase leading-tight">Forged in Iron.<br/>Built for Giants.</h2>
+<div class="space-y-6 font-body-lg text-on-surface-variant">
+<p>Titan Heavy Industries was founded with a singular purpose: to engineer the most reliable excavating machinery on the planet. Our 50,000 sqm facility utilizes state-of-the-art robotic welding and precision assembly lines.</p>
+<p>Every Titan machine is the result of thousands of hours of rigorous stress testing in the harshest environments, from arctic mines to desert excavations. We don't just build machines; we build the backbone of infrastructure.</p>
+</div>
+<div class="mt-12 flex items-center gap-8">
+<div class="flex flex-col">
+<span class="font-stats-number text-industrial-yellow text-4xl">45YRS</span>
+<span class="font-label-technical text-[10px] uppercase">Industry Leadership</span>
+</div>
+<div class="flex flex-col">
+<span class="font-stats-number text-industrial-yellow text-4xl">ISO-9001</span>
+<span class="font-label-technical text-[10px] uppercase">Quality Certified</span>
+</div>
+</div>
+</div>
+</section>
+<!-- News / Exhibition -->
+<section class="py-section-padding px-grid-margin-mobile md:px-grid-margin">
+<div class="flex items-center justify-between mb-16">
+<h2 class="font-headline-xl text-headline-xl uppercase">Industrial Updates</h2>
+<div class="h-px flex-grow mx-12 bg-blueprint-gray hidden md:block"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap- gutter h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden border border-blueprint-gray">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A wide panoramic shot of a massive heavy machinery exhibition booth. The TITAN EXCAVATORS logo is prominently displayed in industrial yellow. Dramatic spotlighting creates a high-stakes, high-contrast B2B trade show atmosphere. Sharp angles and professional staging are key elements." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQY4KjI2lpGJA-6sHLll1FJGZ0ErTcPMwM_G2LuKJo6uXHBGukmcHnpnGsuGVpaFPpxJ06tvUEWlTxR1TJ0DWuDIjikROd0rqBi-aLriCXsAjQy9VEvCfLbszjavZCx7fgTv2dBckIj265lTmnRtL7h46xqvXnTTn7xqoJ0gk6eUZMLSWOME4UWyChQQ9RU0MEB6Oyu0CQuX2wcRR5nZYqr_6cvIvIu8EgVYIm3MyXAuVrmobhiCs7fX9_CdohYKnHaCRdA8tmf_I')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<p class="font-label-technical text-industrial-yellow mb-2 uppercase">Event / Expo 2024</p>
+<h3 class="font-headline-md text-white mb-4 uppercase">Dominating the World Heavy Machinery Expo</h3>
+<p class="text-on-surface-variant max-w-md">Titan showcases the new KME-Series Hybrid propulsion system to global industry leaders.</p>
+</div>
+</div>
+<div class="border border-blueprint-gray p-8 flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<p class="font-label-technical text-industrial-yellow uppercase">Safety</p>
+<div>
+<h4 class="font-headline-md text-lg mb-2 uppercase">Zero-Incident Milestone</h4>
+<p class="text-sm text-on-surface-variant">Our main assembly plant achieves 500 days without a lost-time injury.</p>
+</div>
+<span class="material-symbols-outlined self-end text-on-surface-variant">arrow_outward</span>
+</div>
+<div class="border border-blueprint-gray p-8 flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<p class="font-label-technical text-industrial-yellow uppercase">Innovation</p>
+<div>
+<h4 class="font-headline-md text-lg mb-2 uppercase">AI Fleet Management</h4>
+<p class="text-sm text-on-surface-variant">Version 2.4 of our TitanLink software is now available for all K-Series units.</p>
+</div>
+<span class="material-symbols-outlined self-end text-on-surface-variant">arrow_outward</span>
+</div>
+<div class="md:col-span-2 border border-blueprint-gray p-8 flex items-center gap-8 hover:bg-surface-container-high transition-colors">
+<div class="w-24 h-24 bg-industrial-yellow flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-black text-4xl">manufacturing</span>
+</div>
+<div>
+<h4 class="font-headline-md uppercase mb-2">Expansion: New Giga-Facility</h4>
+<p class="text-on-surface-variant">Groundbreaking ceremony for our upcoming European distribution hub in Munich.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Inquiry CTA -->
+<section class="bg-industrial-yellow py-20 px-grid-margin-mobile md:px-grid-margin relative overflow-hidden">
+<div class="absolute right-0 top-0 h-full w-1/3 opacity-10 pointer-events-none">
+<div class="font-display-lg text-[200px] text-black leading-none select-none -mr-40 mt-10">TITAN</div>
+</div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-display-lg-mobile md:text-display-lg text-black uppercase mb-6">Start Your<br/>Movement.</h2>
+<p class="font-label-technical text-on-primary-fixed uppercase max-w-md">Connect with our industrial consultants for specialized quotes and fleet configuration support.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-4">
+<div class="flex-grow">
+<input class="w-full bg-transparent border-b-2 border-on-primary-fixed placeholder:text-on-primary-fixed/50 py-4 font-label-technical text-on-primary-fixed focus:outline-none focus:border-black transition-all" placeholder="ENTER BUSINESS EMAIL" type="email"/>
+</div>
+<button class="bg-black text-industrial-yellow px-12 py-4 font-label-technical uppercase font-bold hover:bg-white transition-all">Contact Sales</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-2 border-blueprint-gray w-full px-grid-margin-mobile md:px-grid-margin py-20 grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+<div class="font-headline-xl text-[12rem] text-on-surface opacity-[0.03] font-black uppercase whitespace-nowrap">TITAN HEAVY INDUSTRIES</div>
+</div>
+<div class="relative z-10 flex flex-col gap-6">
+<div class="font-headline-md text-industrial-yellow font-black uppercase">Titan Excavators</div>
+<p class="font-label-technical text-on-surface-variant text-xs leading-relaxed">
+                PRECISION ENGINEERING<br/>
+                INDUSTRIAL RELIABILITY<br/>
+                GLOBAL SUPPORT NETWORK
+            </p>
+</div>
+<div class="relative z-10">
+<p class="font-label-technical text-industrial-yellow uppercase mb-6">Products</p>
+<ul class="space-y-4 font-label-technical text-xs uppercase">
+<li><a class="text-on-surface-variant hover:text-industrial-yellow transition-colors" href="#">Excavators</a></li>
+<li><a class="text-on-surface-variant hover:text-industrial-yellow transition-colors" href="#">Wheel Loaders</a></li>
+<li><a class="text-on-surface-variant hover:text-industrial-yellow transition-colors" href="#">Attachments</a></li>
+<li><a class="text-on-surface-variant hover:text-industrial-yellow transition-colors" href="#">Special Equipment</a></li>
+</ul>
+</div>
+<div class="relative z-10">
+<p class="font-label-technical text-industrial-yellow uppercase mb-6">Corporate</p>
+<ul class="space-y-4 font-label-technical text-xs uppercase">
+<li><a class="text-on-surface-variant hover:text-industrial-yellow transition-colors" href="#">Safety Compliance</a></li>
+<li><a class="text-on-surface-variant hover:text-industrial-yellow transition-colors" href="#">Investor Relations</a></li>
+<li><a class="text-on-surface-variant hover:text-industrial-yellow transition-colors" href="#">Sustainability</a></li>
+<li><a class="text-on-surface-variant hover:text-industrial-yellow transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="relative z-10">
+<p class="font-label-technical text-industrial-yellow uppercase mb-6">Global Support</p>
+<div class="text-on-surface-variant font-label-technical text-xs uppercase space-y-2">
+<p>Hotline: 1-800-TITAN-HEAVY</p>
+<p>Support: tech@titanheavy.com</p>
+<p>HQ: 22nd Blueprint Blvd, Industrial District</p>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 mt-20 pt-8 border-t border-blueprint-gray/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-label-technical text-[10px] text-on-surface-variant tracking-widest">
+                © 2024 TITAN HEAVY INDUSTRIES. ALL RIGHTS RESERVED. ENGINEERED PRECISION.
+            </div>
+<div class="flex gap-6">
+<a class="font-label-technical text-[10px] text-on-surface-variant hover:text-industrial-yellow uppercase" href="#">Privacy Policy</a>
+<a class="font-label-technical text-[10px] text-on-surface-variant hover:text-industrial-yellow uppercase" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Hero Animation
+            const heroTl = gsap.timeline();
+            heroTl.from(".reveal-text", {
+                y: 100,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power4.out"
+            });
+
+            // Counters Animation
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                ScrollTrigger.create({
+                    trigger: counter,
+                    start: "top 90%",
+                    onEnter: () => {
+                        let count = 0;
+                        const updateCount = () => {
+                            const speed = target / 50;
+                            if (count < target) {
+                                count += speed;
+                                counter.innerText = Math.ceil(count) + (target > 500 ? "+" : "");
+                                setTimeout(updateCount, 20);
+                            } else {
+                                counter.innerText = target + (target > 500 ? "+" : "");
+                            }
+                        };
+                        updateCount();
+                    }
+                });
+            });
+
+            // Card Reveal
+            gsap.from(".product-card", {
+                scrollTrigger: {
+                    trigger: ".product-card",
+                    start: "top 80%"
+                },
+                y: 50,
+                opacity: 0,
+                stagger: 0.15,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+
+            // Sticky Header Blur Shift
+            ScrollTrigger.create({
+                start: 'top -80',
+                onEnter: () => gsap.to('nav', { backgroundColor: 'rgba(19, 19, 19, 0.95)', duration: 0.3 }),
+                onLeaveBack: () => gsap.to('nav', { backgroundColor: 'rgba(19, 19, 19, 0.8)', duration: 0.3 }),
+            });
+        });
+    </script>
+</body></html>

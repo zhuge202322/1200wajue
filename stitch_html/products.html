@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TITAN EXCAVATORS | Industrial Product Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom scrollbar for technical sidebar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0e0e0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333537;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FFB800;
+        }
+
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(51, 53, 55, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(51, 53, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .btn-primary-hover:hover .hover-slide {
+            transform: translateX(0);
+        }
+        .hover-slide {
+            transform: translateX(-100%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#ffba20",
+                        "on-secondary-fixed-variant": "#464748",
+                        "tertiary-fixed": "#e2e2e2",
+                        "tertiary-container": "#c4c5c5",
+                        "secondary-container": "#464748",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-container-highest": "#353534",
+                        "on-error": "#690005",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-container": "#505252",
+                        "on-surface-variant": "#d5c4ab",
+                        "primary": "#ffdca1",
+                        "surface-container": "#201f1f",
+                        "surface-variant": "#353534",
+                        "surface-bright": "#3a3939",
+                        "deep-charcoal": "#1B1C1D",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#412d00",
+                        "outline-variant": "#514532",
+                        "primary-fixed-dim": "#ffba20",
+                        "on-secondary-fixed": "#1b1c1d",
+                        "inverse-primary": "#7c5800",
+                        "secondary-fixed": "#e3e2e3",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed-dim": "#c7c6c7",
+                        "on-secondary-container": "#b5b5b6",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary": "#c7c6c7",
+                        "on-secondary": "#303031",
+                        "industrial-yellow": "#FFB800",
+                        "background": "#131313",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-fixed-variant": "#5e4200",
+                        "tertiary": "#e1e1e1",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed": "#271900",
+                        "blueprint-gray": "#333537",
+                        "hazard-red": "#E60012",
+                        "on-background": "#e5e2e1",
+                        "surface": "#131313",
+                        "outline": "#9e8f78",
+                        "on-primary-container": "#6b4c00",
+                        "primary-fixed": "#ffdea8",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#2f3131",
+                        "primary-container": "#ffb800"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "component-gap": "1rem",
+                        "grid-margin-mobile": "1.5rem",
+                        "section-padding": "8rem",
+                        "gutter": "1.5rem",
+                        "grid-margin": "4rem"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["IBM Plex Sans"],
+                        "stats-number": ["IBM Plex Sans"],
+                        "headline-xl": ["IBM Plex Sans"],
+                        "headline-xl-mobile": ["IBM Plex Sans"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["IBM Plex Sans"],
+                        "headline-md": ["IBM Plex Sans"],
+                        "label-technical": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "stats-number": ["32px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-technical": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-industrial-yellow selection:text-black">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-xl border-b border-blueprint-gray flex justify-between items-center px-grid-margin-mobile md:px-grid-margin h-20">
+<div class="flex items-center gap-8">
+<span class="font-display-lg-mobile text-display-lg-mobile font-bold text-industrial-yellow tracking-tighter">TITAN EXCAVATORS</span>
+<div class="hidden lg:flex gap-6">
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-industrial-yellow border-b-2 border-industrial-yellow pb-1" href="#">Models</a>
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface hover:text-industrial-yellow transition-colors duration-300" href="#">Fleet Management</a>
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface hover:text-industrial-yellow transition-colors duration-300" href="#">Dealer Portal</a>
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface hover:text-industrial-yellow transition-colors duration-300" href="#">Service</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface">search</button>
+<button class="bg-industrial-yellow text-on-primary-fixed font-label-technical uppercase px-6 py-3 font-bold active:scale-95 duration-100 ease-linear">Request Quote</button>
+</div>
+</nav>
+<main class="pt-20 min-h-screen">
+<!-- Hero / Breadcrumb Section -->
+<header class="blueprint-grid border-b border-blueprint-gray py-12 px-grid-margin-mobile md:px-grid-margin">
+<div class="flex flex-col gap-4">
+<nav class="flex items-center gap-2 font-label-technical text-on-surface-variant text-[12px] uppercase">
+<a class="hover:text-industrial-yellow" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-industrial-yellow" href="#">Products</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-industrial-yellow">Industrial Fleet</span>
+</nav>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface uppercase max-w-4xl">
+                    Precision <span class="text-industrial-yellow">Machinery</span> Catalog
+                </h1>
+<p class="font-label-technical text-label-technical text-on-surface-variant max-w-2xl">
+                    SPECIFICATIONS FOR HEAVY-DUTY EARTHMOVING AND LOGISTICS OPERATIONS. ENGINEERED FOR MAXIMUM UPTIME AND HYDRAULIC EFFICIENCY.
+                </p>
+</div>
+</header>
+<div class="flex flex-col lg:flex-row">
+<!-- Sidebar Filtering -->
+<aside class="w-full lg:w-80 border-r border-blueprint-gray bg-surface-container-lowest p-8 flex flex-col gap-10">
+<div class="flex flex-col gap-6">
+<h3 class="font-label-technical text-label-technical text-industrial-yellow uppercase border-b border-blueprint-gray pb-2">Equipment Category</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 group cursor-pointer">
+<input checked="" class="w-4 h-4 rounded-none border-blueprint-gray bg-transparent checked:bg-industrial-yellow focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+<span class="font-label-technical text-label-technical text-on-surface group-hover:text-industrial-yellow">Excavators</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="w-4 h-4 rounded-none border-blueprint-gray bg-transparent checked:bg-industrial-yellow focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+<span class="font-label-technical text-label-technical text-on-surface-variant group-hover:text-industrial-yellow">Mini Excavators</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="w-4 h-4 rounded-none border-blueprint-gray bg-transparent checked:bg-industrial-yellow focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+<span class="font-label-technical text-label-technical text-on-surface-variant group-hover:text-industrial-yellow">Wheel Loaders</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<input class="w-4 h-4 rounded-none border-blueprint-gray bg-transparent checked:bg-industrial-yellow focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+<span class="font-label-technical text-label-technical text-on-surface-variant group-hover:text-industrial-yellow">Attachments</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="font-label-technical text-label-technical text-industrial-yellow uppercase border-b border-blueprint-gray pb-2">Power Range (kW)</h3>
+<input class="w-full h-1 bg-blueprint-gray appearance-none cursor-pointer accent-industrial-yellow" type="range"/>
+<div class="flex justify-between font-label-technical text-[12px] text-on-surface-variant">
+<span>0 kW</span>
+<span>800 kW</span>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="font-label-technical text-label-technical text-industrial-yellow uppercase border-b border-blueprint-gray pb-2">Operating Weight</h3>
+<div class="grid grid-cols-2 gap-2">
+<button class="border border-blueprint-gray py-2 font-label-technical text-[12px] text-on-surface hover:bg-blueprint-gray transition-colors">0-10t</button>
+<button class="border border-industrial-yellow py-2 font-label-technical text-[12px] text-industrial-yellow">10-30t</button>
+<button class="border border-blueprint-gray py-2 font-label-technical text-[12px] text-on-surface hover:bg-blueprint-gray transition-colors">30-50t</button>
+<button class="border border-blueprint-gray py-2 font-label-technical text-[12px] text-on-surface hover:bg-blueprint-gray transition-colors">50t+</button>
+</div>
+</div>
+<button class="mt-4 border-2 border-on-surface py-3 font-label-technical uppercase font-bold hover:bg-on-surface hover:text-background transition-all duration-300">
+                    Apply Filters
+                </button>
+</aside>
+<!-- Product Grid -->
+<section class="flex-1 p-gutter md:p-12 blueprint-grid">
+<div class="flex justify-between items-end mb-12 border-b-2 border-blueprint-gray pb-4">
+<div class="flex flex-col">
+<span class="font-label-technical text-label-technical text-industrial-yellow uppercase">Fleet View</span>
+<h2 class="font-headline-xl text-headline-xl uppercase">Active Inventory</h2>
+</div>
+<div class="flex gap-4">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Showing 12 Models</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-low border-2 border-blueprint-gray hover:border-industrial-yellow transition-colors group">
+<div class="relative aspect-video overflow-hidden border-b-2 border-blueprint-gray">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="A massive yellow TITAN crawler excavator parked on a rugged construction site during the golden hour. The machine is captured in a cinematic, low-angle shot that highlights its heavy-duty steel construction and massive hydraulic arms. The background features technical blueprint overlays faintly visible in the atmosphere. The lighting is high-contrast, emphasizing the industrial yellow paint against the deep charcoal shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUm1jSN1Ma4S9fkagAlOgbEn_ENL9WycYIes6m8u7cAiXXhZJz8PR5PbR2lSrpHPoQSdpHIY97yXMC5hbZQS4M2Xc735X1LNOhNcUaOejmCL4k1FzDyaWch-s-mafXiaZPzf5gcuR-qv18t1ebSG4UfFSQlXYs9QZAvqOSlGM5koGidLDrxg01nUi1yHocIxYnpnweSUWIXKBYecJ9cscwXcCLB3uiKxMUJD2nOBNQXQ7JKHaIrT2LXTLbIzGZ7RE2CMpxQxh2c1A"/>
+<div class="absolute top-4 right-4 bg-industrial-yellow text-black px-3 py-1 font-label-technical text-[12px] font-bold">ST-400X</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 uppercase tracking-tight">Crawler Excavator ST-400X</h3>
+<div class="grid grid-cols-2 gap-y-4 border-t border-blueprint-gray pt-6">
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Operating Weight</span>
+<span class="font-stats-number text-[20px] text-on-surface">42,500 KG</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Rated Power</span>
+<span class="font-stats-number text-[20px] text-on-surface">240 KW</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Bucket Capacity</span>
+<span class="font-stats-number text-[20px] text-on-surface">2.1 M³</span>
+</div>
+<div class="flex items-end">
+<button class="w-full border border-blueprint-gray py-2 font-label-technical text-[12px] uppercase group-hover:bg-industrial-yellow group-hover:text-black transition-all">View Specs</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-low border-2 border-blueprint-gray hover:border-industrial-yellow transition-colors group">
+<div class="relative aspect-video overflow-hidden border-b-2 border-blueprint-gray">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="A powerful TITAN wheel loader positioned in a modern industrial yard. The machine has massive tires and a bright industrial yellow bucket raised slightly. The style is sharp and technical, reflecting high-performance engineering. The lighting is cold and precise, with deep blue tones in the shadows and bright highlights on the hydraulic pistons. The overall mood is authoritative and relentless." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuzFp1Ps8QZK8UzKqHjhUZ8USezBT5M7AzEVDpB1oDeRB6lhJpiT5TFv1bceH6SMZ3C2FX1aiH-UVkc1I4wssc0SU1VrcQrAGhOFwnQvhT-B9nPPc0iJwuUb2LMsaKGSnC0Sj4UjLI-H_JEqFVrTNdQuFHj9VIo5WQM-0PEL5JltU9-ok_SnvCCz7a-Kjvl4KE2M-gsjzqX_YDiNWjh6_eI1jvmqEVQcmuaeEoGQW6iGcbrrSDuRyVAWOtoVzJLo_WLfyrkoJulf0"/>
+<div class="absolute top-4 right-4 bg-industrial-yellow text-black px-3 py-1 font-label-technical text-[12px] font-bold">WL-250H</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 uppercase tracking-tight">Wheel Loader WL-250H</h3>
+<div class="grid grid-cols-2 gap-y-4 border-t border-blueprint-gray pt-6">
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Operating Weight</span>
+<span class="font-stats-number text-[20px] text-on-surface">18,200 KG</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Rated Power</span>
+<span class="font-stats-number text-[20px] text-on-surface">165 KW</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Bucket Capacity</span>
+<span class="font-stats-number text-[20px] text-on-surface">4.5 M³</span>
+</div>
+<div class="flex items-end">
+<button class="w-full border border-blueprint-gray py-2 font-label-technical text-[12px] uppercase group-hover:bg-industrial-yellow group-hover:text-black transition-all">View Specs</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-low border-2 border-blueprint-gray hover:border-industrial-yellow transition-colors group">
+<div class="relative aspect-video overflow-hidden border-b-2 border-blueprint-gray">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Close-up of a TITAN heavy-duty excavator attachment, a massive hydraulic rock breaker, mounted on a machinery arm. The image focus is on the mechanical joints and high-pressure hoses. The background is a blurred dark industrial setting. The visual language is that of a blueprint come to life, with extreme clarity, sharp edges, and a monochromatic industrial yellow and charcoal color scheme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHYPJDO3IJKCcW189I1cDceN4hE-NtemYhRYIozAyOiLju0mlfuf2bYuUNAmgc9qGxrlryVo2Rm-Lc8uuhTa6VkkpUkM5ugrJ8i0YReDsW2T0LmvsecZzp9INyt3Il_kM83dXMGUy7VoAmlWfRqU9HSx8F6NlCe4KAPZQ7MR4pW-tJ1GFXWTXooubSrFg02HZtEbY-626nTr6abz43k9aPbUxLgemLVQCA3Iq6lXH_NTn-T0kWTr0CszWcURWNv0zNa8yHIqiSuCM"/>
+<div class="absolute top-4 right-4 bg-industrial-yellow text-black px-3 py-1 font-label-technical text-[12px] font-bold">RB-50</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 uppercase tracking-tight">Rock Breaker RB-50</h3>
+<div class="grid grid-cols-2 gap-y-4 border-t border-blueprint-gray pt-6">
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Impact Energy</span>
+<span class="font-stats-number text-[20px] text-on-surface">6,500 J</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Oil Flow</span>
+<span class="font-stats-number text-[20px] text-on-surface">190 L/MIN</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Weight Class</span>
+<span class="font-stats-number text-[20px] text-on-surface">25-45 T</span>
+</div>
+<div class="flex items-end">
+<button class="w-full border border-blueprint-gray py-2 font-label-technical text-[12px] uppercase group-hover:bg-industrial-yellow group-hover:text-black transition-all">View Specs</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 (Mini) -->
+<div class="bg-surface-container-low border-2 border-blueprint-gray hover:border-industrial-yellow transition-colors group">
+<div class="relative aspect-video overflow-hidden border-b-2 border-blueprint-gray">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="A compact TITAN mini excavator parked inside a pristine, white-lit warehouse. The machine is compact yet looks incredibly robust. The image has a clean, technical catalog feel, with precise shadows and a high-key lighting setup that makes the yellow paint pop. Minimalist and engineered aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD94n3uRbNM6m6TOyNxqEdGWwbzJydJXYTr1CK2htyb9jV1yzTRpwxj8oUPcfYWCP88CS1YOun54euebL_nwZNGUPFx6TD8mt4tD5yLFSmpduqN8uKwHW1j6XlQoP37UywkuK305n5eSq5kM7O5au9x-0RySAC9Zxtc4-svWy_IJPNvtVP9JFUvm0Z5GNLOmwluDhJehE8rfmLRpcs4-7Jr7xbEWjgerKANRPYXmJaKHsojTzIDNmmNwW2oTOQxVfpekVzVMs0QNFI"/>
+<div class="absolute top-4 right-4 bg-industrial-yellow text-black px-3 py-1 font-label-technical text-[12px] font-bold">MX-15G</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 uppercase tracking-tight">Mini Excavator MX-15G</h3>
+<div class="grid grid-cols-2 gap-y-4 border-t border-blueprint-gray pt-6">
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Operating Weight</span>
+<span class="font-stats-number text-[20px] text-on-surface">1,500 KG</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Rated Power</span>
+<span class="font-stats-number text-[20px] text-on-surface">11.8 KW</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-technical text-[10px] text-on-surface-variant uppercase">Bucket Capacity</span>
+<span class="font-stats-number text-[20px] text-on-surface">0.04 M³</span>
+</div>
+<div class="flex items-end">
+<button class="w-full border border-blueprint-gray py-2 font-label-technical text-[12px] uppercase group-hover:bg-industrial-yellow group-hover:text-black transition-all">View Specs</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Catalog CTA Footer -->
+<div class="mt-20 bg-deep-charcoal border-2 border-industrial-yellow p-12 flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl uppercase text-on-surface mb-2">Technical Documentation</h2>
+<p class="font-body-md text-on-surface-variant">Full specifications, maintenance cycles, and hydraulic diagrams for the 2024 fleet.</p>
+</div>
+<button class="relative z-10 bg-industrial-yellow text-black px-10 py-5 font-label-technical uppercase font-bold text-lg flex items-center gap-3 overflow-hidden group btn-primary-hover">
+<span class="relative z-10">Download Technical Catalog</span>
+<span class="material-symbols-outlined relative z-10 group-hover:translate-y-1 transition-transform">download</span>
+<div class="absolute inset-0 bg-white hover-slide"></div>
+</button>
+<!-- Blueprint decoration element -->
+<div class="absolute -bottom-10 -right-10 opacity-5 pointer-events-none">
+<span class="font-display-lg text-[180px] leading-none">TITAN</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest border-t-2 border-blueprint-gray px-grid-margin-mobile md:px-grid-margin py-20 grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+<div class="col-span-1 md:col-span-1">
+<span class="font-display-lg text-headline-xl text-industrial-yellow font-bold tracking-tighter">TITAN</span>
+<p class="mt-6 font-label-technical text-[12px] text-on-surface-variant uppercase leading-loose">
+                Heavy Machinery Manufacturing<br/>
+                Engineered in Industrial Sector 7<br/>
+                Global Logistics Hub
+            </p>
+</div>
+<div>
+<h4 class="font-label-technical text-label-technical text-industrial-yellow uppercase mb-6">Products</h4>
+<ul class="flex flex-col gap-3 font-label-technical text-[13px] text-on-surface-variant">
+<li><a class="hover:text-industrial-yellow transition-colors" href="#">Excavators</a></li>
+<li><a class="hover:text-industrial-yellow transition-colors" href="#">Wheel Loaders</a></li>
+<li><a class="hover:text-industrial-yellow transition-colors" href="#">Attachments</a></li>
+<li><a class="hover:text-industrial-yellow transition-colors" href="#">Parts Catalog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-technical text-label-technical text-industrial-yellow uppercase mb-6">Company</h4>
+<ul class="flex flex-col gap-3 font-label-technical text-[13px] text-on-surface-variant">
+<li><a class="hover:text-industrial-yellow transition-colors" href="#">Safety Compliance</a></li>
+<li><a class="hover:text-industrial-yellow transition-colors" href="#">Investor Relations</a></li>
+<li><a class="hover:text-industrial-yellow transition-colors" href="#">Global Service</a></li>
+<li><a class="hover:text-industrial-yellow transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-technical text-label-technical text-industrial-yellow uppercase mb-6">Contact</h4>
+<p class="font-label-technical text-[13px] text-on-surface-variant uppercase">Support: +1 (800) TITAN-01</p>
+<p class="font-label-technical text-[13px] text-on-surface-variant uppercase mt-2">Email: HQ@TITAN.IND</p>
+<div class="flex gap-4 mt-6">
+<a class="w-10 h-10 border border-blueprint-gray flex items-center justify-center hover:border-industrial-yellow hover:text-industrial-yellow transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+<a class="w-10 h-10 border border-blueprint-gray flex items-center justify-center hover:border-industrial-yellow hover:text-industrial-yellow transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">public</span>
+</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 mt-20 pt-8 border-t border-blueprint-gray flex flex-col md:flex-row justify-between gap-4">
+<span class="font-label-technical text-[11px] text-on-surface-variant">© 2024 TITAN HEAVY INDUSTRIES. ALL RIGHTS RESERVED. ENGINEERED PRECISION.</span>
+<span class="font-label-technical text-[11px] text-on-surface-variant uppercase">v2.4 Technical Platform</span>
+</div>
+<!-- Huge Watermark -->
+<div class="absolute bottom-4 right-4 pointer-events-none select-none">
+<span class="font-headline-xl text-headline-xl text-on-surface opacity-10 font-black">TITAN HEAVY INDUSTRIES</span>
+</div>
+</footer>
+<script>
+        // Micro-interaction for filter range
+        const rangeInput = document.querySelector('input[type="range"]');
+        rangeInput.addEventListener('input', (e) => {
+            // Logically would update product grid in real app
+            console.log(`Filtering for power range: ${e.target.value} kW`);
+        });
+
+        // Hover effect for product cards grayscale toggle
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.transition = 'all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

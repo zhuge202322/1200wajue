@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TITAN EXCAVATORS | Request a Technical Quote</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Scrollbar for Industrial Feel */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #333537; }
+        ::-webkit-scrollbar-thumb:hover { background: #FFB800; }
+
+        /* Button Hover Mechanical Slide Effect */
+        .btn-primary-slide {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-primary-slide::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: #1B1C1D;
+            transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+            z-index: -1;
+        }
+        .btn-primary-slide:hover::before {
+            transform: translateX(100%);
+        }
+        .btn-primary-slide:hover {
+            color: #FFB800;
+        }
+
+        /* Technical Border Focus Animation */
+        .input-line-focus {
+            position: relative;
+        }
+        .input-line-focus::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: #FFB800;
+            transition: width 0.3s ease-out;
+        }
+        .input-line-focus:focus-within::after {
+            width: 100%;
+        }
+
+        /* Step Progress */
+        .step-active { color: #FFB800; border-bottom: 2px solid #FFB800; }
+        .step-inactive { color: #514532; border-bottom: 2px solid #333537; }
+    </style>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#ffba20",
+                        "on-secondary-fixed-variant": "#464748",
+                        "tertiary-fixed": "#e2e2e2",
+                        "tertiary-container": "#c4c5c5",
+                        "secondary-container": "#464748",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-container-highest": "#353534",
+                        "on-error": "#690005",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-container": "#505252",
+                        "on-surface-variant": "#d5c4ab",
+                        "primary": "#ffdca1",
+                        "surface-container": "#201f1f",
+                        "surface-variant": "#353534",
+                        "surface-bright": "#3a3939",
+                        "deep-charcoal": "#1B1C1D",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#412d00",
+                        "outline-variant": "#514532",
+                        "primary-fixed-dim": "#ffba20",
+                        "on-secondary-fixed": "#1b1c1d",
+                        "inverse-primary": "#7c5800",
+                        "secondary-fixed": "#e3e2e3",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed-dim": "#c7c6c7",
+                        "on-secondary-container": "#b5b5b6",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary": "#c7c6c7",
+                        "on-secondary": "#303031",
+                        "industrial-yellow": "#FFB800",
+                        "background": "#131313",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-fixed-variant": "#5e4200",
+                        "tertiary": "#e1e1e1",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed": "#271900",
+                        "blueprint-gray": "#333537",
+                        "hazard-red": "#E60012",
+                        "on-background": "#e5e2e1",
+                        "surface": "#131313",
+                        "outline": "#9e8f78",
+                        "on-primary-container": "#6b4c00",
+                        "primary-fixed": "#ffdea8",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#2f3131",
+                        "primary-container": "#ffb800"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "component-gap": "1rem",
+                        "grid-margin-mobile": "1.5rem",
+                        "section-padding": "8rem",
+                        "gutter": "1.5rem",
+                        "grid-margin": "4rem"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["IBM Plex Sans"],
+                        "stats-number": ["IBM Plex Sans"],
+                        "headline-xl": ["IBM Plex Sans"],
+                        "headline-xl-mobile": ["IBM Plex Sans"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["IBM Plex Sans"],
+                        "headline-md": ["IBM Plex Sans"],
+                        "label-technical": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "stats-number": ["32px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-technical": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-industrial-yellow selection:text-background font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-xl border-b border-blueprint-gray flex justify-between items-center px-grid-margin-mobile md:px-grid-margin w-full h-20">
+<div class="font-display-lg-mobile md:text-headline-md font-black text-industrial-yellow tracking-tighter uppercase">
+            TITAN EXCAVATORS
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface hover:text-industrial-yellow transition-colors duration-300" href="#">Models</a>
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface hover:text-industrial-yellow transition-colors duration-300" href="#">Fleet Management</a>
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface hover:text-industrial-yellow transition-colors duration-300" href="#">Dealer Portal</a>
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface hover:text-industrial-yellow transition-colors duration-300" href="#">Service</a>
+<a class="font-label-technical text-label-technical uppercase tracking-widest text-industrial-yellow border-b-2 border-industrial-yellow pb-1" href="#">Parts</a>
+</div>
+<button class="bg-industrial-yellow text-on-primary-fixed px-6 py-2 font-label-technical uppercase tracking-widest btn-primary-slide">
+            Request Quote
+        </button>
+</nav>
+<main class="pt-32 pb-section-padding">
+<div class="max-w-[1440px] mx-auto px-grid-margin-mobile md:px-grid-margin grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Side: Header & Context -->
+<div class="lg:col-span-4 flex flex-col justify-start">
+<span class="font-label-technical text-industrial-yellow uppercase tracking-widest mb-4">Industrial Logistics</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg uppercase leading-none mb-8">
+                    Request a <br/><span class="text-on-surface-variant">Technical</span> <br/>Quote
+                </h1>
+<p class="font-body-lg text-on-surface-variant max-w-sm mb-12">
+                    Submit your fleet requirements for precision-engineered heavy machinery. Our technical consultants respond with finalized pricing within 24 operational hours.
+                </p>
+<!-- Contact Info Grid -->
+<div class="grid grid-cols-1 gap-6 border-t border-blueprint-gray pt-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-industrial-yellow" style="font-variation-settings: 'FILL' 1;">add_call</span>
+<div>
+<p class="font-label-technical text-[10px] text-outline uppercase">Global Support</p>
+<p class="font-headline-md text-on-surface">+1 (800) TITAN-HD</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-industrial-yellow" style="font-variation-settings: 'FILL' 1;">mail</span>
+<div>
+<p class="font-label-technical text-[10px] text-outline uppercase">Direct Inquiry</p>
+<p class="font-headline-md text-on-surface">procurement@titan.hd</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-industrial-yellow" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<p class="font-label-technical text-[10px] text-outline uppercase">HQ / Manufacturing</p>
+<p class="font-headline-md text-on-surface">12 Industrial Way, Detroit, MI</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Multi-Step Form -->
+<div class="lg:col-span-8 bg-surface-container-low border-2 border-blueprint-gray p-8 md:p-12">
+<!-- Step Indicator -->
+<div class="flex items-center justify-between mb-12 font-label-technical uppercase tracking-tighter text-[12px]">
+<div class="step-active pb-2 transition-all duration-300" id="step-1-label">01. Model Selection</div>
+<div class="step-inactive pb-2 transition-all duration-300" id="step-2-label">02. Technical Specs</div>
+<div class="step-inactive pb-2 transition-all duration-300" id="step-3-label">03. Logistics & Shipping</div>
+<div class="step-inactive pb-2 transition-all duration-300" id="step-4-label">04. Authentication</div>
+</div>
+<form class="space-y-12" id="quote-form">
+<!-- Step 1: Model Selection -->
+<div class="form-step space-y-8" id="step-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="space-y-2 group cursor-pointer border-2 border-blueprint-gray p-4 hover:border-industrial-yellow transition-all" onclick="selectModel(this, 'TX-500')">
+<div class="h-32 w-full bg-surface-container-highest mb-4 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A high-contrast cinematic photograph of a Titan TX-500 heavy excavator at a construction site during blue hour. The machine is illuminated by sharp industrial work lights, highlighting its black and industrial yellow matte finish. The environment is dusty and rugged, emphasizing the machine's powerful build and precision engineering. Modern, minimalist, and authoritative atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqjSJtfQ4nQ8wjHaCEFEa5Ry-tnE9w5GOn5wS54YBfOsfSRHR0bxregW01Y45ud9bCjhXW-NQeUyo_eS_Awu5t8uoUXN6L6UQfkCeDvuh9LauGOiBge-N499yL5MLYjnQe3CtAnf9N6Y0lw5CwLQkLGl3piDOPUTh8V891oD-i1ziUMDlNsY89o_EuStAWnI6ZLS36LRVXXiF9tSgMZf7sGTEkMDQBYlp7_ayOUoX8l315YV8OCcBXaQj5MoFJzHVC4L8FYUY1Qnk"/>
+</div>
+<p class="font-label-technical text-industrial-yellow">HEAVY DUTY</p>
+<h3 class="font-headline-md uppercase">TX-500 Goliath</h3>
+<p class="font-body-md text-outline">50-Ton Excavator / Stage V Engine</p>
+</div>
+<div class="space-y-2 group cursor-pointer border-2 border-blueprint-gray p-4 hover:border-industrial-yellow transition-all" onclick="selectModel(this, 'TX-250')">
+<div class="h-32 w-full bg-surface-container-highest mb-4 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A detailed commercial shot of a Titan TX-250 compact loader in a clean factory setting with blueprint lines projected on the background floor. The machine features a sleek, metallic charcoal body with vibrant industrial yellow accents. The lighting is cold and precise, reflecting off the machine's polished hydraulic cylinders. Aesthetic is technical, high-end B2B, and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHqUgmwX4vPyQCM_FT8koU4Qtdl6lmssJ__OueE-R56wT1ZTqgPs71q0O61Ldj6N6nYsiddPxgGW6Lt2a5sQOX9Di_9zHVT-9VEH2m9knZHXYO7nJgjlrLh8w8qtIXW4J0qOaWh2vOaxlx3MZV_c9Z8qMq_lhmGPCOIjPAT0NyCP-b4rSCDCqtvIy4fS4VjO_gCyjjIhdld5AgqI_iBb7Imw4H3UYHlYcpC3pUC1-kvRYU5gPDCXqdXkN3CBGPVg_HnOLfxoclBJA"/>
+</div>
+<p class="font-label-technical text-industrial-yellow">PRECISION</p>
+<h3 class="font-headline-md uppercase">TX-250 Precision</h3>
+<p class="font-body-md text-outline">25-Ton Versatility / Advanced Telematics</p>
+</div>
+</div>
+<input id="model-input" name="model" type="hidden"/>
+</div>
+<!-- Step 2: Quantity & Technical Specs (Hidden initially) -->
+<div class="form-step hidden space-y-8" id="step-2">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="input-line-focus">
+<label class="font-label-technical text-outline uppercase block mb-2">Quantity</label>
+<input class="w-full bg-transparent border-none border-b border-blueprint-gray text-headline-md focus:ring-0 placeholder:text-surface-container-highest text-on-surface p-0 pb-2" min="1" placeholder="01" type="number"/>
+</div>
+<div class="input-line-focus">
+<label class="font-label-technical text-outline uppercase block mb-2">Attachment Package</label>
+<select class="w-full bg-transparent border-none border-b border-blueprint-gray text-headline-md focus:ring-0 text-on-surface p-0 pb-2 appearance-none">
+<option class="bg-surface-container">Standard Bucket</option>
+<option class="bg-surface-container">Hydraulic Hammer</option>
+<option class="bg-surface-container">Demolition Grapple</option>
+<option class="bg-surface-container">Earth Auger</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Step 3: Shipping (Hidden) -->
+<div class="form-step hidden space-y-8" id="step-3">
+<div class="grid grid-cols-1 gap-gutter">
+<div class="input-line-focus">
+<label class="font-label-technical text-outline uppercase block mb-2">Primary Destination (Country/City)</label>
+<input class="w-full bg-transparent border-none border-b border-blueprint-gray text-headline-md focus:ring-0 placeholder:text-surface-container-highest text-on-surface p-0 pb-2" placeholder="BERLIN, GERMANY" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="input-line-focus">
+<label class="font-label-technical text-outline uppercase block mb-2">Est. Delivery Date</label>
+<input class="w-full bg-transparent border-none border-b border-blueprint-gray text-headline-md focus:ring-0 text-on-surface p-0 pb-2" type="date"/>
+</div>
+<div class="input-line-focus">
+<label class="font-label-technical text-outline uppercase block mb-2">Freight Preference</label>
+<select class="w-full bg-transparent border-none border-b border-blueprint-gray text-headline-md focus:ring-0 text-on-surface p-0 pb-2 appearance-none">
+<option class="bg-surface-container">Ocean Freight (FCL)</option>
+<option class="bg-surface-container">Rail Transport</option>
+<option class="bg-surface-container">Expedited Ground</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 4: Identity (Hidden) -->
+<div class="form-step hidden space-y-8" id="step-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="input-line-focus">
+<label class="font-label-technical text-outline uppercase block mb-2">Corporate Entity</label>
+<input class="w-full bg-transparent border-none border-b border-blueprint-gray text-headline-md focus:ring-0 placeholder:text-surface-container-highest text-on-surface p-0 pb-2" placeholder="GLOBAL MINING CORP" type="text"/>
+</div>
+<div class="input-line-focus">
+<label class="font-label-technical text-outline uppercase block mb-2">Tax ID / VAT Number</label>
+<input class="w-full bg-transparent border-none border-b border-blueprint-gray text-headline-md focus:ring-0 placeholder:text-surface-container-highest text-on-surface p-0 pb-2" placeholder="VAT-1029384" type="text"/>
+</div>
+<div class="input-line-focus">
+<label class="font-label-technical text-outline uppercase block mb-2">Contact Name</label>
+<input class="w-full bg-transparent border-none border-b border-blueprint-gray text-headline-md focus:ring-0 placeholder:text-surface-container-highest text-on-surface p-0 pb-2" placeholder="MAXIMILIAN SCHMIDT" type="text"/>
+</div>
+<div class="input-line-focus">
+<label class="font-label-technical text-outline uppercase block mb-2">Official Email</label>
+<input class="w-full bg-transparent border-none border-b border-blueprint-gray text-headline-md focus:ring-0 placeholder:text-surface-container-highest text-on-surface p-0 pb-2" placeholder="M.SCHMIDT@GLOBALMINING.COM" type="email"/>
+</div>
+</div>
+</div>
+<!-- Navigation Buttons -->
+<div class="pt-12 flex justify-between items-center border-t border-blueprint-gray">
+<button class="hidden font-label-technical uppercase text-outline hover:text-on-surface transition-colors" id="prev-btn" type="button">
+                            ← Previous Phase
+                        </button>
+<div class="flex-1"></div>
+<button class="bg-industrial-yellow text-on-primary-fixed px-10 py-4 font-label-technical uppercase tracking-widest btn-primary-slide" id="next-btn" type="button">
+                            Initialize Step 02
+                        </button>
+<button class="hidden bg-industrial-yellow text-on-primary-fixed px-10 py-4 font-label-technical uppercase tracking-widest btn-primary-slide" id="submit-btn" type="submit">
+                            Submit Engineering Request
+                        </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Global Location Section (Map) -->
+<section class="max-w-[1440px] mx-auto px-grid-margin-mobile md:px-grid-margin mt-32">
+<div class="border-2 border-blueprint-gray overflow-hidden grid grid-cols-1 lg:grid-cols-3">
+<div class="lg:col-span-2 relative h-96 group">
+<img class="w-full h-full object-cover" data-alt="A top-down stylized blueprint-style map of an industrial district in Detroit. The map uses a monochrome dark aesthetic with thin blueprint-gray lines and glowing industrial yellow highlights on major Titan manufacturing hubs. The image has a technical, grid-based overlay that feels like a digital tracking system for logistics." data-location="Detroit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3FnVYfK3S7LBTykR50--Ln_6kzh-JiuzyHK4FxYOHo0c1c6rIjNINhwdPajC2wjTjHraB6eucHf3-Cf5BbfiCrDrSsF-IHVzBJnxZBsLnFy8mGWWjwD3H8FXZD5YVwDgAVuefFWGJLXvsmO19sk6Nxh6KoSq05KgqZEppjuMeZ1rxUMfMAlEBKlHqzzC2s7wk10V2VgVe_jnETBulbfSOsu5iv6-tlEeIEEAkSTinUain5lngFX4AVxKGGYvhZpW4iDnLp1wOk1Q"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute bottom-8 left-8 flex items-center gap-4 bg-background/90 p-4 border border-blueprint-gray">
+<div class="w-3 h-3 bg-hazard-red animate-pulse"></div>
+<p class="font-label-technical text-on-surface uppercase">Live Manufacturing Status: Operational</p>
+</div>
+</div>
+<div class="p-8 md:p-12 bg-deep-charcoal border-l border-blueprint-gray flex flex-col justify-center">
+<h4 class="font-headline-md uppercase mb-4 text-industrial-yellow">Direct Assistance</h4>
+<p class="font-body-md text-outline mb-8">Immediate technical consultation available for fleet managers via encrypted communications.</p>
+<a class="flex items-center justify-between p-4 border border-blueprint-gray hover:border-industrial-yellow transition-all mb-4" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-industrial-yellow">chat</span>
+<span class="font-label-technical uppercase">WhatsApp Secure</span>
+</div>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="flex items-center justify-between p-4 border border-blueprint-gray hover:border-industrial-yellow transition-all" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-industrial-yellow">video_call</span>
+<span class="font-label-technical uppercase">Schedule Video Spec</span>
+</div>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-grid-margin-mobile md:px-grid-margin py-section-padding grid grid-cols-1 md:grid-cols-4 gap-gutter border-t-2 border-blueprint-gray bg-surface-container-lowest">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-xl text-on-surface opacity-10 font-black mb-4">TITAN</div>
+<p class="font-label-technical text-outline uppercase text-[10px]">© 2024 TITAN HEAVY INDUSTRIES. ALL RIGHTS RESERVED. ENGINEERED PRECISION.</p>
+</div>
+<div>
+<h5 class="font-label-technical text-industrial-yellow uppercase mb-6">Equipment</h5>
+<ul class="space-y-3 font-label-technical text-on-surface-variant text-[12px] uppercase">
+<li><a class="hover:text-industrial-yellow transition-all" href="#">Product Catalog</a></li>
+<li><a class="hover:text-industrial-yellow transition-all" href="#">Mining Fleet</a></li>
+<li><a class="hover:text-industrial-yellow transition-all" href="#">Service Network</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-technical text-industrial-yellow uppercase mb-6">Corporate</h5>
+<ul class="space-y-3 font-label-technical text-on-surface-variant text-[12px] uppercase">
+<li><a class="hover:text-industrial-yellow transition-all" href="#">Safety Compliance</a></li>
+<li><a class="hover:text-industrial-yellow transition-all" href="#">Investor Relations</a></li>
+<li><a class="hover:text-industrial-yellow transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="flex flex-col items-start md:items-end">
+<button class="bg-transparent border-2 border-blueprint-gray text-on-surface px-8 py-3 font-label-technical uppercase tracking-widest hover:bg-on-surface hover:text-background transition-all">
+                Download Specs (PDF)
+            </button>
+</div>
+</footer>
+<script>
+        let currentStep = 1;
+        const totalSteps = 4;
+
+        function selectModel(element, modelName) {
+            // Clear other selections
+            document.querySelectorAll('#step-1 div.group').forEach(el => {
+                el.classList.remove('border-industrial-yellow');
+                el.classList.add('border-blueprint-gray');
+            });
+            // Highlight selected
+            element.classList.add('border-industrial-yellow');
+            element.classList.remove('border-blueprint-gray');
+            document.getElementById('model-input').value = modelName;
+        }
+
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const submitBtn = document.getElementById('submit-btn');
+
+        nextBtn.addEventListener('click', () => {
+            if(currentStep === 1 && !document.getElementById('model-input').value) {
+                alert('Please select a machinery model to proceed.');
+                return;
+            }
+
+            if (currentStep < totalSteps) {
+                document.getElementById(`step-${currentStep}`).classList.add('hidden');
+                document.getElementById(`step-${currentStep}-label`).classList.replace('step-active', 'step-inactive');
+                currentStep++;
+                document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+                document.getElementById(`step-${currentStep}-label`).classList.replace('step-inactive', 'step-active');
+            }
+
+            updateNav();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentStep > 1) {
+                document.getElementById(`step-${currentStep}`).classList.add('hidden');
+                document.getElementById(`step-${currentStep}-label`).classList.replace('step-active', 'step-inactive');
+                currentStep--;
+                document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+                document.getElementById(`step-${currentStep}-label`).classList.replace('step-inactive', 'step-active');
+            }
+            updateNav();
+        });
+
+        function updateNav() {
+            // Buttons Visibility
+            if (currentStep === 1) {
+                prevBtn.classList.add('hidden');
+            } else {
+                prevBtn.classList.remove('hidden');
+            }
+
+            if (currentStep === totalSteps) {
+                nextBtn.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+                nextBtn.textContent = `Initialize Step 0${currentStep + 1}`;
+            }
+        }
+    </script>
+</body></html>

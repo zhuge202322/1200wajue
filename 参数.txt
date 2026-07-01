@@ -1,0 +1,204 @@
+NT10 
+加图片
+Operating weight:910kg 
+Engine model:KD192F-1
+Rated power:7kw
+Specifications
+ Type of cab  	 Canopy	
+ Bucket capacity  	m3	0.022		Bucket width, std.	mm	400		Operating weight	kg	910		Dimensions	 Overall length  	mm	2876			 Overall height  	mm	2220			 Overall width  	mm	880			Ground clearance	mm	132		Engine 	 Brand  	KOOP 			 Model  	KD192F-1			 Displacement	 L	 0.499  			Output	kw/rpm	7.0/3000		  Working ranges  	Max Digging height	mm	2600			Max Dumping height	mm	1830			Max digging depth	mm	1715			Max. Digging radius	mm	3065			Min .swing radius	mm	1483			Max digging force (Arm)	 kN	4.6			Max digging force (Bucket)	 kN	7.2		Track	 Type  	 	Rubber track			Rubber shoe width	mm	180		 Undercarriage	Track length	mm	1233			Traveling speed	 km/h	2			Gradeability	 deg	58/30		 Swing speed	 rpm	13		 Ground pressure	 kPa	20		Dozer size	Width	mm	840			Height	mm	240			Lifting capacity (Height/Depth)	mm	150/200		Hydraulic pumps	Type	 	1 Gear pump			Flow rate	 L/min	18			Hydraulic pressure	Mpa	16		Swing motor  	 	 Cycloidr motor  		 Travel motor  	 	Cycloidr motor  		 Fuel tank capacity  	 L  	7		 Hydraulic oil tank capacity  	 L  	14.5		
+NT12 
+加图片
+Operating weight:1000kg 
+Engine model:Yanmar 3TNV74F
+Rated power:11.2kw
+Specifications
+
+NT12EV
+加图片
+Operating weight:1000kg 
+Power model:72V-150AH-240AH
+Power output:6.2kw
+Specification
+
+HS12U
+加图片
+Operating weight:1200kg 
+Engine model:Kubota D722
+Rated power:10.2kw
+Specifications
+参考手册
+HS18
+Operating weight:1800kg 
+Engine model:Kubota D902
+Rated power:11.8kw
+Engine Manufacturer and Model	Yanmar 3TNV80/Kubota D902	
+Non-Road Emission Standard	EPA&EU-V emission	
+Gross Rated Power(ISO 14396)	14.6KW/11.8KW at 2,200 rpm	
+Cylinders	3	
+Main Pump	Variable-displacement pump	
+Maximum Discharge Flow	1×39.6 I/m(1×18 cc/rev at 100%efficiency)	
+Pilot Pump	External pilot unit with safety valve and 2-speed control valve	
+Controls	Hydraulic pilot controls with hydraulic-enable lever	
+Travel Motor	Variable plunger motor	
+Maximum drawbar Pull	12.9 kN	
+High travelling speed	4.5 km/h	
+Low travelling speed	2.6 km/h	
+Operating Dimensions	
+Arm Length	940 mm	
+Maximum Reach	3899 mm	
+Maximum Reach at Ground Leve	3848 mm	
+Maximum Digging Depth	2326 mm	
+Maximum Cutting Height	3462 mm	
+Maximum Loading Height	2436 mm	
+Minimum Slew Radius	1372 mm	
+Maximum Vertical Wall Digging Depth	1713 mm	
+Tail-Swing Radius	660 mm	
+Machine Dimensions	
+Arm Length	940 mm	
+Overall Length	3584 mm	
+Overall Height	2362 mm	
+Overall Width (over tracks)	
+Minimum	990 mm	
+Maximum	1300 mm	
+Tail-Swing Radius	660 mm	
+Tumbler Distance	1223 mm	
+Overall Length of Crawler	1251 mm	
+Counterweight Clearance	448 mm	
+Overall Height(to top of cab)	2362 mm	
+Ground Clearance	156 mm	
+Overall Width of Upperstructur	980 mm	
+Track Gauge	760 mm	
+Shoe Width	230 mm	
+
+NT18DR
+加图片
+Operating weight:1900kg 
+Engine model:Kubota 1105
+Rated power:14kw
+ 	1900	
+Hydraulic Oil Pump B	SHIMADZU	
+	Import EATON	
+	Import EATON	
+	 	
+		
+	14 KN	
+	10 KN	
+	<35°(70%)	
+	YANMAR 3TNV80			
+ 				
+	0.993	1.13	0.898	
+ 	3	3	3	
+			 	
+	1900 mm	
+	1300 mm	
+	3800 mm	
+		
+	3050 mm	
+	2217 mm	
+ 	1820 mm	
+ 	1048 mm	
+	3690 mm	
+ 	1500 mm	
+Operatingsystem		
+Overall width	1060 mm	
+	2300 mm	
+	3800mm	
+ 	230 mm	
+ l  	1250 mm	
+	230 mm	
+NT25
+加图片
+Operating weight:2500kg 
+Engine model:Yanmar 3TNV88F
+Rated power:20.3kw
+参考手册
+HS27
+加图片
+Operating weight:2700kg 
+Engine model:Yanmar YANMAR 3TNV80F
+Rated power:15.2kw
+Model	HS27 Mini Excavator	
+Operating weight	2700kgs	
+Bucket capacity	0.08	
+Engine Model	YANMAR 3TNV80F	
+Rated power (kw/r/min)	15.2/2500	
+Maximum torque （N*m）	63.2/1800	
+Engine displacement（L）	1.267	
+Max.flow (L/min)	72	
+Working pressure (Mpa)	24.5	
+Fuel tank capacity (L)	35	
+Hydraulic oil tank capacity (L)	28	
+Travel speed (km/h)	2.0/3.2	
+Swing speed (r/min)	11.5	
+Max. climbing degree (%)	58	
+Arm digging force	14.2	
+Bucket digging force (KN)	20	
+Average grounding pressure (Kpa)	30.5	
+Overall length (mm)	4159.0	
+Overall width (mm)	1550	
+Overall height (to top of boom)(mm)	1636.0	
+Overall height (to top of cab)(mm)	2560	
+Counterweight ground clearance(mm)	535.0	
+Min. ground clearance (mm)	320	
+Tail swing radius (mm)	775.0	
+Track ground length(mm)	1600	
+Track length (mm)	2040.0	
+Track gauge (mm)	1250	
+Track width (mm)	1550.0	
+Track shoe width (mm)	250	
+Turntable width (mm)	1375.0	
+Max. digging height (mm)	4132	
+Max. dumping height (mm)	2742.0	
+Max. digging depth (mm)	2800	
+Max. vertical wall digging depth (mm)	2240.0	
+Max. digging reach (mm)	4610	
+Max. digging reach at ground level (mm)	4494.0	
+Min. swing radius (mm)	2096	
+Distance between center of rotation and tail length (mm)	775.0	
+Height of counterweight (mm)	300.0	
+Ground length (in transportion)(mm)	2908	
+Arm length (mm)	1150.0	
+Boom length (mm)	2015	
+Deflection angle left°/right°	47/74	
+Maximum dozing height/depth (mm)	362/383	
+Dozer size width/height（mm）	270/1550	
+
+
+HS37
+加图片
+Operating weight:3700kg 
+Engine model:Yanmar YANMAR 3TNV88F
+Rated power:18.2kw
+Engine model	YANMAR 3TNV88F	
+Rated power	kw/r/min	18.2/2200	
+Max.flow	L/min	88	
+Working pressure	Mpa	24.5	
+Fuel tank capacity	L	50	
+Hydraulic oil tank capacity	L	40	
+Travel speed	km/h	2.2/4.2	
+Swing speed	r/min	9.5	
+Max.climbing degree	%	58	
+Arm digging force	KN	18.2	
+Bucket digging force	KN	30.4	
+Average grounding pressure	Kpa	32.0	
+Working Range		
+Max.digging height	mm	4855	
+Max.dumping height	mm	3460.0	
+Max.digging depth	mm	3105	
+Max.vertical wall digging depth	mm	2700.0	
+Max.digging reach	mm	5465	
+Max.digging reach at ground level	mm	5350.0	
+Overall Dimension		
+Overall length	mm	4920.0	
+Overall width	mm	1720	
+Overallheight(to top of boom)	mm	1800.0	
+Overallheight(to top of cab)	mm	2550/2520	
+Counterweight ground clearance	mm	580.0	
+Min.ground clearance	mm	295	
+Tail swing radius	mm	860.0	
+Track ground length	mm	1710	
+Track length	mm	2160.0	
+Track gauge	mm	1420	
+Track width	mm	1710.0	
+Track shoe width	mm	300	
+
