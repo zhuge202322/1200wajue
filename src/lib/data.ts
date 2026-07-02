@@ -229,7 +229,7 @@ export const products: Product[] = [
     description: 'With a digging depth of 3200 mm and a digging force of 30 kN, the HS37 can work effortlessly through hard soil layers and debris. The hydraulic quick coupler allows changing between different attachments in seconds, without unnecessary downtime.',
     image: '/images/products/hs37.jpg',
     gallery: Array.from({length: 7}, (_, i) => `/images/products/hs37/${i+1}.jpg`),
-    features: ['Max Digging Depth: 3105mm', 'Bucket Digging Force: 30.4 KN', 'Fuel Tank: 50L', 'Professional Grade Performance'],
+    features: ['Powerful YANMAR Engine', 'Equipped with various attachments', 'Advanced Hydraulics', 'Sealed Cabin With A/C'],
     specs: {
       'Operating Weight': '3700 kg',
       'Engine Brand': 'Yanmar 3TNV88F',
