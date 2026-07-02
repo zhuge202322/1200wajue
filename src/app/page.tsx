@@ -189,7 +189,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-24 bg-on-background text-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to upgrade your fleet?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to buy your satisfied mini excavators?</h2>
           <p className="text-xl mb-10 text-white/70">Connect with our industrial consultants for specialized quotes and configuration support.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <input 
