@@ -1,8 +1,4 @@
 import React from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import FloatingContact from '@/components/FloatingContact';
-import Navbar from '@/components/Navbar';
 
 export const metadata = {
   title: 'Success Cases | HERESTRONG MACHINERY',
@@ -38,57 +34,49 @@ export default function CasesPage() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-background font-sans">
-      <Header />
-      <Navbar />
-
-      <main className="flex-grow pt-[136px]">
-        {/* Hero Section */}
-        <div className="bg-surface-dim py-20 px-8 border-b border-outline">
-          <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-on-background uppercase tracking-tight mb-6">
-              Success Cases
-            </h1>
-            <p className="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-              Discover how HERESTRONG machinery is empowering customers across the globe to achieve maximum efficiency in various working conditions.
-            </p>
-          </div>
+    <main className="flex-grow pt-[136px]">
+      {/* Hero Section */}
+      <div className="bg-surface-dim py-20 px-8 border-b border-outline">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-on-background uppercase tracking-tight mb-6">
+            Success Cases
+          </h1>
+          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+            Discover how HERESTRONG machinery is empowering customers across the globe to achieve maximum efficiency in various working conditions.
+          </p>
         </div>
+      </div>
 
-        {/* Cases List */}
-        <div className="max-w-7xl mx-auto px-6 md:px-16 py-24 space-y-32">
-          {cases.map((c, index) => (
-            <div key={c.id} className="flex flex-col gap-12">
-              {/* Text Area */}
-              <div className="max-w-4xl mx-auto text-center px-4">
-                <div className="w-16 h-1 bg-primary mx-auto mb-8"></div>
-                <h2 className="text-2xl md:text-3xl font-bold text-on-background mb-6 uppercase tracking-wider">
-                  {c.title}
-                </h2>
-                <p className="text-on-surface-variant leading-relaxed text-lg">
-                  {c.text}
-                </p>
-              </div>
-
-              {/* Image Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {c.images.map((imgSrc, imgIdx) => (
-                  <div key={imgIdx} className="aspect-[4/3] bg-surface-dim overflow-hidden shadow-sm group border border-outline hover:border-primary transition-colors">
-                    <img 
-                      src={imgSrc} 
-                      alt={`Case ${index+1} image ${imgIdx+1}`} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                    />
-                  </div>
-                ))}
-              </div>
+      {/* Cases List */}
+      <div className="max-w-7xl mx-auto px-6 md:px-16 py-24 space-y-32">
+        {cases.map((c, index) => (
+          <div key={c.id} className="flex flex-col gap-12">
+            {/* Text Area */}
+            <div className="max-w-4xl mx-auto text-center px-4">
+              <div className="w-16 h-1 bg-primary mx-auto mb-8"></div>
+              <h2 className="text-2xl md:text-3xl font-bold text-on-background mb-6 uppercase tracking-wider">
+                {c.title}
+              </h2>
+              <p className="text-on-surface-variant leading-relaxed text-lg">
+                {c.text}
+              </p>
             </div>
-          ))}
-        </div>
-      </main>
 
-      <Footer />
-      <FloatingContact />
-    </div>
+            {/* Image Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {c.images.map((imgSrc, imgIdx) => (
+                <div key={imgIdx} className="aspect-[4/3] bg-surface-dim overflow-hidden shadow-sm group border border-outline hover:border-primary transition-colors">
+                  <img 
+                    src={imgSrc} 
+                    alt={`Case ${index+1} image ${imgIdx+1}`} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </main>
   );
 }
