@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isSolid || menuOpen ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-outline' : 'bg-transparent'} h-24 flex justify-between items-center px-5 md:px-16`}>
       <Link href="/" className="flex items-center gap-3">
-        <img src="/logo.png" alt="Herestrong Logo" className="h-8 w-auto hidden sm:block" onError={(e) => e.currentTarget.style.display='none'} />
+        <img src="/logo.png" alt="Herestrong Logo" className="h-12 w-auto hidden sm:block" onError={(e) => e.currentTarget.style.display='none'} />
         <div className={`font-bold text-2xl tracking-tight transition-colors duration-300 ${isSolid || menuOpen ? 'text-on-background' : 'text-white'}`}>
           HERESTRONG
         </div>
