@@ -19,7 +19,7 @@ export default function FloatingContact() {
       
       {/* Email */}
       <a 
-        href="/inquiry" 
+        href="mailto:info@herestrong.cn" 
         className="w-14 h-14 bg-[#0052CC] rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform hover:shadow-xl group relative"
         title="Email"
       >
