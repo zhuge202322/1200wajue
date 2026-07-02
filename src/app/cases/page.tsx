@@ -63,7 +63,7 @@ export default function CasesPage() {
             </div>
 
             {/* Image Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className={`grid grid-cols-1 sm:grid-cols-2 ${c.images.length === 3 ? 'md:grid-cols-3 max-w-5xl' : 'md:grid-cols-3 lg:grid-cols-4'} gap-6 mx-auto w-full`}>
               {c.images.map((imgSrc, imgIdx) => (
                 <div key={imgIdx} className="aspect-[4/3] bg-surface-dim overflow-hidden shadow-sm group border border-outline hover:border-primary transition-colors">
                   <img 
