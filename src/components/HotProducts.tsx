@@ -64,6 +64,15 @@ export default function HotProducts() {
             </div>
           ))}
         </div>
+
+        {/* View More Button */}
+        <div className="flex justify-center mt-12">
+          <Link href="/products">
+            <button className="border-2 border-primary text-primary font-bold uppercase tracking-wider px-10 py-3 hover:bg-primary hover:text-white transition-colors duration-300 shadow-sm flex items-center gap-2">
+              View More <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );
