@@ -26,13 +26,13 @@ export default function AboutPage() {
             </h3>
             <div className="space-y-6 text-on-surface-variant leading-relaxed">
               <p>
-                Established in 2017, we are one of the leading enterprises specialized in researching, developing, and manufacturing small hydraulic crawler excavators ranging from 1 ton to 6 tons. Our machines are available in both advanced diesel and pure electric versions, catering to modern environmental standards.
+                Qingdao Herestrong Machinery Co.,Ltd is one of leading enterprises established in 2017, specialized in researching, developing and manufacturing small hydraulic crawler excavators ranging from 1 ton to 6 tons, available in both diesel and pure electric versions. Our excavators are mainly divided into NT Series and HS Series. HS Series are Tailless excavators for precise excavation work in confined spaces. Our factory covers an area of about 150,000 square meters, has about 300 employees in peak season, annual sales reached about USD20 million.
               </p>
               <p>
-                Our excavators are mainly divided into the <strong>NT Series</strong> and the <strong>HS Series</strong>. The HS Series specifically features Tailless excavators designed for precise excavation work in confined urban and industrial spaces.
+                Basing on advanced equipment, excellent facilities, strict quality control and normative management system, products have been exporting to more than 100+ countries and successfully passed CE certificate and a Declaration of Conformity according to the EU Machinery Directive. We are keeping developing and completing our own brand "HERESTRONG", of course OEM is also welcome.
               </p>
               <p>
-                Our factory covers an area of about 150,000 square meters and has about 300 employees during the peak season. With annual sales reaching about USD 20 million, we have successfully exported our machinery to over 100+ countries worldwide.
+                We are always following ISO9001 international quality management system to control product quality, welcome to visit our factory to test HERESTRONG excavators for future business.
               </p>
             </div>
             
@@ -60,7 +60,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="aspect-[4/5] bg-surface-dim overflow-hidden shadow-md group">
-                  <img src="/images/about/4/1.jpg" alt="Factory Overview" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/images/about/4/4.jpg" alt="Global Shipping" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="aspect-square bg-surface-dim overflow-hidden shadow-md group">
                   <img src="/images/about/4/2.jpg" alt="Our Team" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -71,7 +71,7 @@ export default function AboutPage() {
                   <img src="/images/about/4/3.png" alt="Manufacturing" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="aspect-[4/5] bg-surface-dim overflow-hidden shadow-md group">
-                  <img src="/images/about/4/4.jpg" alt="Global Shipping" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/images/about/4/1.jpg" alt="Factory Overview" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
               </div>
             </div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-8 md:px-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-3">Global Standards</h2>
-            <h3 className="text-4xl font-bold mb-8">Uncompromising Quality Control</h3>
+            <h3 className="text-4xl font-bold mb-8">Strict Quality Control</h3>
             <div className="text-white/70 leading-relaxed mb-12 space-y-6">
               <p>
                 Based on advanced equipment, excellent facilities, strict quality control, and a normative management system, our products successfully pass CE certification and hold a Declaration of Conformity according to the EU Machinery Directive.

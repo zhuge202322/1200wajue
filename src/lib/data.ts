@@ -101,7 +101,7 @@ export const products: Product[] = [
     engine: 'Kubota D722 Engine',
     description: 'Ultra-compact zero-tail swing excavator ideal for working flush against walls and in narrow alleys.',
     image: '/images/products/hs12u.jpg',
-    gallery: Array.from({length: 5}, (_, i) => `/images/products/hs12u/${i+1}.jpg`),
+    gallery: Array.from({length: 7}, (_, i) => `/images/products/hs12u/${i+1}.jpg`),
     features: [
       'Compact Design',
       'High/Low Speeds',
@@ -172,19 +172,19 @@ export const products: Product[] = [
     id: 'nt25',
     name: 'NT25 Mini Excavator',
     series: 'NT',
-    weight: '2500 kg',
-    power: '20.3 kw',
-    engine: 'Yanmar 3TNV88F',
-    description: 'The heaviest of the NT series, offering robust performance for tough terrains and heavy loads.',
+    weight: '2400 kg',
+    power: '20.3 kw/2400rpm',
+    engine: 'YANMAR 3TNV88F',
+    description: 'For more details and online ordering, please visit our Alibaba store: https://herestrongmachinery.en.alibaba.com',
     image: '/images/products/nt25.jpg',
     gallery: Array.from({length: 2}, (_, i) => `/images/products/nt25/${i+1}.jpg`),
     features: ['Heavy Duty Design', 'Yanmar High Power Engine', 'Superior Breakout Force'],
     specs: {
-      'Operating Weight': '2500 kg',
-      'Engine Brand': 'Yanmar 3TNV88F',
-      'Rated Power': '20.3 kw',
-      'Max Digging Depth': '2500 mm',
-      'Bucket Capacity': '0.06 m³'
+      'Operating Weight': '2400 kg',
+      'Engine Brand': 'YANMAR 3TNV88F',
+      'Rated Power': '20.3 kw/2400rpm',
+      'Max Digging Depth': '2712 mm',
+      'Bucket Capacity': '0.07 m³'
     }
   },
   {

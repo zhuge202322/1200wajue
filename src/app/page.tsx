@@ -67,7 +67,15 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-16 bg-white border-b border-outline">
         <div className="max-w-7xl mx-auto px-8 md:px-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-outline">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 divide-x divide-outline">
+            <div className="text-center px-4">
+              <div className="text-4xl font-bold text-primary mb-2">20+</div>
+              <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">YEARS EXPERIENCE</div>
+            </div>
+            <div className="text-center px-4">
+              <div className="text-4xl font-bold text-primary mb-2">150+</div>
+              <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">COUNTRIES EXPORTED</div>
+            </div>
             <div className="text-center px-4">
               <div className="text-4xl font-bold text-primary mb-2">10</div>
               <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">PRODUCTION LINE</div>
@@ -92,32 +100,50 @@ export default function Home() {
       
       <HotProducts />
 
-      {/* About Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-8 md:px-16 flex flex-col md:flex-row items-center gap-16">
-          <div className="w-full md:w-1/2 relative">
-            <div className="aspect-[4/3] overflow-hidden rounded-none shadow-md">
-              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/banner/slide5.jpg')" }}></div>
+      {/* About Us Section */}
+      <section className="py-24 bg-surface-dim">
+        <div className="max-w-7xl mx-auto px-8 md:px-16">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            
+            {/* Video Side */}
+            <div className="relative aspect-[4/3] w-full">
+              <video 
+                src="/videos/6b7c5b75b540b9229a5b0bc063ad96ec_raw.mp4" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className="absolute inset-0 w-full h-full object-cover shadow-md"
+              />
             </div>
-            <div className="absolute -bottom-8 -right-8 bg-primary text-white p-8 shadow-xl hidden md:block rounded-none">
-              <div className="text-3xl font-bold mb-1">ISO 9001</div>
-              <div className="text-sm font-bold uppercase tracking-wider">Certified Manufacturing</div>
+            
+            {/* Content Side */}
+            <div className="flex flex-col justify-center">
+              <div className="mb-8">
+                <span className="text-primary font-bold tracking-wider text-sm uppercase mb-4 block">COMPANY INTRODUCTION</span>
+                <h2 className="text-3xl md:text-4xl font-bold text-on-background leading-tight mb-6">
+                  Qingdao Herestrong Machinery Co., Ltd.
+                </h2>
+                <div className="space-y-4 text-lg text-on-surface-variant">
+                  <p>
+                    Qingdao Herestrong Machinery Co.,Ltd is one of leading enterprises established in 2017, specialized in researching, developing and manufacturing small hydraulic crawler excavators ranging from 1 ton to 6 tons, available in both diesel and pure electric versions. Our excavators are mainly divided into NT Series and HS Series. HS Series are Tailless excavators for precise excavation work in confined spaces. Our factory covers an area of about 150,000 square meters, has about 300 employees in peak season, annual sales reached about USD20 million.
+                  </p>
+                  <p>
+                    Basing on advanced equipment, excellent facilities, strict quality control and normative management system, products have been exporting to more than 100+ countries and successfully passed CE certificate and a Declaration of Conformity according to the EU Machinery Directive. We are keeping developing and completing our own brand "HERESTRONG", of course OEM is also welcome.
+                  </p>
+                  <p>
+                    We are always following ISO9001 international quality management system to control product quality, welcome to visit our factory to test HERESTRONG excavators for future business.
+                  </p>
+                </div>
+              </div>
+              
+              <Link href="/about">
+                <button className="border-2 border-primary text-primary px-8 py-3 font-bold hover:bg-primary hover:text-white transition-colors w-fit">
+                  LEARN MORE ABOUT US
+                </button>
+              </Link>
             </div>
-          </div>
-          <div className="w-full md:w-1/2">
-            <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-3">Corporate Identity</h2>
-            <h3 className="text-4xl font-bold text-on-background mb-6">Manufacturing The Backbone of Infrastructure</h3>
-            <p className="text-on-surface-variant mb-6 leading-relaxed">
-              Qingdao Herestrong Machinery Co.,Ltd was established in 2017 with a singular purpose: to engineer the most reliable excavating machinery on the planet. Our 150,000 sqm facility utilizes state-of-the-art robotic welding and precision assembly lines.
-            </p>
-            <p className="text-on-surface-variant mb-10 leading-relaxed">
-              Every machine is the result of thousands of hours of rigorous stress testing in the harshest environments, from arctic mines to desert excavations. We do not just build machines; we build trust.
-            </p>
-            <Link href="/about">
-              <button className="bg-transparent border-2 border-on-background text-on-background px-8 py-4 font-bold uppercase tracking-wider hover:bg-on-background hover:text-white transition-all duration-300 rounded-none">
-                Learn More About Us
-              </button>
-            </Link>
+            
           </div>
         </div>
       </section>
