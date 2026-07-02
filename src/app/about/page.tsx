@@ -60,18 +60,18 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="aspect-[4/5] bg-surface-dim overflow-hidden shadow-md group">
-                  <img src="/images/about/4/4.jpg" alt="Global Shipping" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/images/about/4/1.jpg" alt="Factory Exterior" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="aspect-square bg-surface-dim overflow-hidden shadow-md group">
-                  <img src="/images/about/4/2.jpg" alt="Our Team" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/images/about/4/3.png" alt="Customer Service" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
                 <div className="aspect-square bg-surface-dim overflow-hidden shadow-md group">
-                  <img src="/images/about/4/3.png" alt="Manufacturing" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/images/about/4/2.jpg" alt="Workshop Equipment" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="aspect-[4/5] bg-surface-dim overflow-hidden shadow-md group">
-                  <img src="/images/about/4/1.jpg" alt="Factory Overview" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/images/about/4/4.jpg" alt="Reception" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
               </div>
             </div>
