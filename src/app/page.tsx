@@ -89,7 +89,7 @@ export default function Home() {
               <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">CERTIFICATED</div>
             </div>
             <div className="text-center px-4">
-              <div className="text-4xl font-bold text-primary mb-2">24H/7DAYS</div>
+              <div className="text-4xl font-bold text-primary mb-2">24H/7D</div>
               <div className="text-sm font-semibold text-on-surface-variant uppercase tracking-wider">ONLINE SERVICE</div>
             </div>
           </div>
