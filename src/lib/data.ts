@@ -175,10 +175,10 @@ export const products: Product[] = [
     weight: '2400 kg',
     power: '20.3 kw/2400rpm',
     engine: 'YANMAR 3TNV88F',
-    description: 'For more details and online ordering, please visit our Alibaba store: https://herestrongmachinery.en.alibaba.com',
+    description: 'This mini-excavator is equipped with a YANMAR 3TNV88F diesel engine with 20.3 kW (27.6 HP), which complies with the Stage V emission standard. This ensures fuel efficiency and low emissions, making the machine perfect for both inner-city and rural projects.',
     image: '/images/products/nt25.jpg',
     gallery: Array.from({length: 2}, (_, i) => `/images/products/nt25/${i+1}.jpg`),
-    features: ['Heavy Duty Design', 'Yanmar High Power Engine', 'Superior Breakout Force'],
+    features: ['Powerful YANMAR Engine', 'Advanced Hydraulics', 'Equipped with various attachments', 'Sealed Cabin'],
     specs: {
       'Operating Weight': '2400 kg',
       'Engine Brand': 'YANMAR 3TNV88F',
