@@ -66,6 +66,10 @@ export default function Navbar() {
       </div>
       
       <div className="flex items-center gap-4">
+        <a href="https://wa.me/8615666793337" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center bg-[#25D366] text-white px-6 py-3 rounded-none font-semibold text-sm hover:bg-[#128C7E] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 ease-out">
+          <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.133 1.528 5.92L0 24l6.236-1.637C7.962 23.33 9.948 24 12.031 24c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm3.642 17.218c-.156.44-3.03 2.115-3.327 2.158-.297.043-.655.087-2.128-.485-2.583-.987-4.225-3.642-4.354-3.815-.13-.173-1.042-1.388-1.042-2.646 0-1.258.651-1.884.887-2.128.236-.244.515-.306.685-.306.17 0 .34.004.49.011.163.007.382-.061.597.464.225.549.771 1.886.84 2.025.07.14.117.304.03.477-.087.173-.13.282-.26.434-.13.151-.275.32-.39.434-.13.13-.264.275-.116.533.147.258.655 1.085 1.408 1.758.974.872 1.79 1.144 2.046 1.274.256.13.407.108.56-.065.151-.173.651-.758.825-1.018.173-.26.346-.217.585-.13.238.087 1.515.715 1.775.845.26.13.433.195.496.304.062.108.062.63-.094 1.07z"/></svg>
+          WhatsApp
+        </a>
         <Link href="/inquiry" className="hidden sm:block">
           <button className="bg-primary text-white px-8 py-3 rounded-none font-semibold text-sm hover:bg-primary-hover shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 ease-out">
             Get Quote
