@@ -226,7 +226,7 @@ export const products: Product[] = [
     weight: '3700 kg',
     power: '18.2 kw',
     engine: 'Yanmar 3TNV88F',
-    description: 'The flagship of the HS series, providing maximum digging power and depth for serious excavation projects.',
+    description: 'With a digging depth of 3200 mm and a digging force of 30 kN, the HS37 can work effortlessly through hard soil layers and debris. The hydraulic quick coupler allows changing between different attachments in seconds, without unnecessary downtime.',
     image: '/images/products/hs37.jpg',
     gallery: Array.from({length: 7}, (_, i) => `/images/products/hs37/${i+1}.jpg`),
     features: ['Max Digging Depth: 3105mm', 'Bucket Digging Force: 30.4 KN', 'Fuel Tank: 50L', 'Professional Grade Performance'],
