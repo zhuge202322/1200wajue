@@ -7,7 +7,7 @@ const baseDir = "D:\\kehu\\1200wajue\\网站内容";
 let sourceDir = "";
 const dirs = fs.readdirSync(baseDir);
 for (const d of dirs) {
-    if (d.includes('6') && d.includes('图')) {
+    if (d.includes('网站6张轮番大图20260701')) {
         sourceDir = path.join(baseDir, d);
         break;
     }
