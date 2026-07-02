@@ -6,7 +6,7 @@ import { products } from '@/lib/data';
 
 export default function FeaturedSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const featured = products.filter(p => p.series === 'NT' || p.series === 'HS').slice(0, 5); // Take 5 for the slider
+  const featured = products.filter(p => p.series === 'NT' || p.series === 'HS'); // All products
   const activeProduct = featured[activeIndex];
 
   return (
@@ -77,29 +77,39 @@ export default function FeaturedSlider() {
         </div>
 
         {/* Thumbnail Selector */}
-        <div className="relative pt-8 border-t border-outline">
-          {/* Custom Indicator Triangle */}
-          <div 
-             className="absolute top-0 -mt-2 w-4 h-4 bg-primary transform rotate-45 transition-all duration-500" 
-             style={{ left: `calc(${(activeIndex / featured.length) * 100}% + ${(100 / featured.length) / 2}%)`, marginLeft: '-8px' }}
-          ></div>
-          <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-          
-          <div className="flex justify-between items-center mt-6 overflow-x-auto gap-4 snap-x">
-            {featured.map((p, idx) => (
-              <div 
-                key={p.id} 
-                onClick={() => setActiveIndex(idx)}
-                className={`flex flex-col items-center cursor-pointer min-w-[120px] snap-center group transition-all duration-300 ${activeIndex === idx ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
-              >
-                <div className="w-24 h-24 mb-2 bg-surface-dim rounded-sm overflow-hidden border border-outline group-hover:border-primary transition-colors">
-                  <img src={p.image} alt={p.name} className="w-full h-full object-contain" />
-                </div>
-                <span className={`text-xs font-bold uppercase ${activeIndex === idx ? 'text-primary' : 'text-on-background'}`}>
-                  {p.name.split(' ')[0]}
-                </span>
+        <div className="w-full overflow-x-auto pb-6 snap-x custom-scrollbar">
+          <div className="relative min-w-max px-2 pt-4">
+            
+            {/* Indicator Track */}
+            <div className="relative w-full h-8 mb-4">
+              <div className="absolute top-1/2 left-0 w-full h-1 bg-primary -translate-y-1/2"></div>
+              <div className="absolute top-0 left-0 w-full h-full flex gap-4 md:gap-8">
+                {featured.map((p, idx) => (
+                  <div key={`tri-${p.id}`} className="w-24 md:w-32 shrink-0 relative">
+                    <div className={`absolute top-1/2 left-1/2 w-4 h-4 bg-primary transform -translate-x-1/2 -translate-y-1/2 rotate-45 transition-transform duration-300 z-10 ${activeIndex === idx ? 'scale-100' : 'scale-0'}`}></div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Thumbnails */}
+            <div className="flex gap-4 md:gap-8">
+              {featured.map((p, idx) => (
+                <div 
+                  key={p.id} 
+                  onClick={() => setActiveIndex(idx)}
+                  className={`w-24 md:w-32 shrink-0 flex flex-col items-center cursor-pointer snap-center group transition-opacity duration-300 ${activeIndex === idx ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
+                >
+                  <div className="w-24 h-24 md:w-32 md:h-32 mb-3 bg-surface-dim rounded-sm overflow-hidden border border-outline group-hover:border-primary transition-colors">
+                    <img src={p.image} alt={p.name} className="w-full h-full object-contain p-2" />
+                  </div>
+                  <span className={`text-xs md:text-sm font-bold uppercase whitespace-nowrap ${activeIndex === idx ? 'text-primary' : 'text-on-surface-variant'}`}>
+                    {p.name.split(' ')[0]}
+                  </span>
+                </div>
+              ))}
+            </div>
+
           </div>
         </div>
 
