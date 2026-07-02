@@ -33,6 +33,8 @@ export default function Navbar() {
   const links = [
     { name: 'HOME', path: '/' },
     { name: 'PRODUCTS', path: '/products' },
+    { name: 'ADVANTAGES', path: '/advantages' },
+    { name: 'SUCCESS CASES', path: '/cases' },
     { name: 'ABOUT US', path: '/about' },
     { name: 'CONTACT', path: '/inquiry' },
   ];
